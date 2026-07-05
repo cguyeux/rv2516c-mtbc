@@ -1,0 +1,85 @@
+\documentclass[11pt,a4paper]{article}
+
+% -- Encodage et langue --
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+
+% -- Mise en page --
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+
+% -- Packages scientifiques --
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage{placeins}
+\usepackage{lineno}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!60!black,
+    citecolor=green!50!black,
+    urlcolor=blue!70!black
+}
+
+% -- Bibliographie --
+\usepackage[numbers,sort&compress]{natbib}
+
+% -- Commandes personnalisees --
+\newcommand{\todo}[1]{\textcolor{red}{\textbf{[TODO: #1]}}}
+\newcommand{\mtb}{\textit{Mycobacterium tuberculosis}}
+\newcommand{\spdi}[1]{\texttt{#1}}
+\newcommand{\lignee}[1]{\textsf{#1}}
+
+\title{Rv2516c: an essential and exceptionally vulnerable uncharacterised protein of Mycobacterium tuberculosis as a candidate drug target}
+
+\author{Christophe Guyeux$^{1,*}$\\[6pt]
+  \parbox{\textwidth}{\centering\small
+    $^{1}$Femto-ST Institute, UMR 6174 CNRS,\\
+    Universit\'e Marie et Louis Pasteur, Besan\c{c}on, France\\[3pt]
+    $^{*}$Corresponding author: \texttt{christophe.guyeux@univ-fcomte.fr}
+  }
+}
+
+\date{}
+
+% ===========================================================
+\begin{document}
+\linenumbers
+\maketitle
+
+\begin{abstract}
+\todo{Write abstract}
+\end{abstract}
+
+\textbf{Keywords:} \textit{Mycobacterium tuberculosis}, MTBC, \lignee{Rv2516c}, phylogenomics, TBannotator
+
+\section{Introduction}
+
+\todo{Write introduction}
+
+\section{Materials and Methods}
+
+\todo{Describe data and pipeline}
+
+\section{Results}
+
+\todo{Write results}
+
+\section{Discussion}
+
+\todo{Write discussion}
+
+\section{Conclusion}
+
+\todo{Write conclusion}
+
+\bibliographystyle{unsrtnat}
+\bibliography{references}
+
+\end{document}
