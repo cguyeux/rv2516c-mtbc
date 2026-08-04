@@ -12,6 +12,7 @@
 *.snm
 *.dvi
 main.pdf
+main_fr.pdf
 
 # Editor / OS
 .DS_Store
