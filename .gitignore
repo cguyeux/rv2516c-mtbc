@@ -17,3 +17,7 @@ main.pdf
 .DS_Store
 *.swp
 *.swo
+
+# Internal QA process artifacts (not for public disclosure)
+claim_check.md
+review/
