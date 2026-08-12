@@ -88,6 +88,23 @@
   verified = {2026-08-03},
 }
 
+% Confirme via /bib-check le 2026-08-12 : CrossRef (champs identiques) + abstract PubMed (PMID
+% 11800587, non open access) confronte au contexte de citation dans main.tex -- l'abstract confirme
+% explicitement l'excision, par l'excisionase L5, d'un plasmide integre du chromosome chez
+% M. tuberculosis (pas seulement M. smegmatis), point precis sur lequel le manuscrit s'appuie.
+@article{parish2001excisionase,
+  author  = {Parish, Tanya and Lewis, Jason and Stoker, Neil G.},
+  title   = {Use of the mycobacteriophage {L5} excisionase in {Mycobacterium} tuberculosis to demonstrate gene essentiality},
+  journal = {Tuberculosis},
+  year    = {2001},
+  volume  = {81},
+  number  = {5-6},
+  pages   = {359--364},
+  doi     = {10.1054/tube.2001.0312},
+  pmid    = {11800587},
+  verified = {2026-08-12},
+}
+
 % ---------- Méthodes et outils computationnels ----------
 
 @article{jumper2021alphafold,
@@ -147,6 +164,85 @@
   doi     = {10.1101/2025.06.14.659707},
   note    = {Preprint},
   verified = {2026-08-03},
+}
+
+% ---------- Ajouts P6.1 (2026-08-11) -- vérifiées via /bib-check le 2026-08-11 ----------
+% (métadonnées CrossRef confrontées champ à champ ; contexte de citation dans main.tex confronté
+% au sujet réel du papier, voir article/claim_check.md et le rapport /bib-check de la même session)
+
+@article{rustad2008dosr,
+  author  = {Rustad, Tige R. and Harrell, Maureen I. and Liao, Reiling and Sherman, David R.},
+  title   = {The Enduring Hypoxic Response of {Mycobacterium tuberculosis}},
+  journal = {PLOS ONE},
+  year    = {2008},
+  volume  = {3},
+  number  = {1},
+  pages   = {e1502},
+  doi     = {10.1371/journal.pone.0001502},
+  verified = {2026-08-11},
+}
+
+@article{rustad2014tfoe,
+  author  = {Rustad, Tige R. and Minch, Kyle J. and Ma, Shuyi and Winkler, Jessica K. and Hobbs, Samuel and Hickey, Meaghan and Brabant, Wendy and Turkarslan, Serdar and Price, Nathan D. and Baliga, Nitin S. and Sherman, David R.},
+  title   = {Mapping and manipulating the {Mycobacterium tuberculosis} transcriptome using a transcription factor overexpression-derived regulatory network},
+  journal = {Genome Biology},
+  year    = {2014},
+  volume  = {15},
+  number  = {11},
+  pages   = {502},
+  doi     = {10.1186/s13059-014-0502-3},
+  verified = {2026-08-11},
+}
+
+% Année = année d'impression du numéro D1 2019 (published-print 2019-01-08) ; CrossRef `issued`
+% renvoie la mise en ligne 2018-10-24 -- même convention print-vs-online que szklarczyk2023string
+% et varadi2022afdb plus haut, pas un écart. Titre/auteurs/volume/pages confirmés CrossRef le
+% 2026-08-11.
+@article{vita2019iedb,
+  author  = {Vita, Randi and Mahajan, Swapnil and Overton, James A. and Dhanda, Sandeep Kumar and Martini, Sheridan and Cantrell, Jason R. and Wheeler, Daniel K. and Sette, Alessandro and Peters, Bjoern},
+  title   = {The Immune Epitope Database ({IEDB}): 2018 update},
+  journal = {Nucleic Acids Research},
+  year    = {2019},
+  volume  = {47},
+  number  = {D1},
+  pages   = {D339--D343},
+  doi     = {10.1093/nar/gky1006},
+  verified = {2026-08-11},
+}
+
+% Contexte de citation confronte le 2026-08-12 (/bib-check) : PMID 28348866 confirme (Europe PMC),
+% plein texte open access lu (PMC5320590) -- le sujet (prediction + validation experimentale
+% IFN-gamma d'epitopes T restreints BoLA-DRB3 dans le proteome de M. bovis) correspond exactement au
+% "IFNgamma-response peptide... in bovine MHC" du manuscrit. La position exacte de l'epitope sur
+% Rv2516c (227-246) provient d'une requete IEDB par accession UniProt I6YDM0 (Methods du manuscrit),
+% pas d'une lecture du texte de cet article (locus tags M. bovis "Mb", pas "Rv" -- non recherchable
+% par grep sur cet identifiant) ; non re-derivee independamment de l'API IEDB cette session.
+@article{farrell2016botb,
+  author  = {Farrell, Damien and Jones, Gareth and Pirson, Charlotte and Malone, Kerri and Rue-Albrecht, Kevin and Chubb, Alistair J. and Vordermeier, Martin and Gordon, Stephen V.},
+  title   = {Integrated computational prediction and experimental validation identifies promiscuous {T} cell epitopes in the proteome of {Mycobacterium bovis}},
+  journal = {Microbial Genomics},
+  year    = {2016},
+  volume  = {2},
+  number  = {8},
+  pages   = {e000071},
+  doi     = {10.1099/mgen.0.000071},
+  pmid    = {28348866},
+  verified = {2026-08-11},
+}
+
+% Année = année d'impression (published-print 2018-01, vol. 27(1)) ; CrossRef `issued` renvoie la
+% mise en ligne 2017-10-24 -- même convention print-vs-online que ci-dessus, pas un écart.
+% Titre/auteurs/volume/pages confirmés CrossRef le 2026-08-11.
+@article{jurrus2018apbs,
+  author  = {Jurrus, Elizabeth and Engel, Dave and Star, Keith and Monson, Kyle and Brandi, Juan and Felberg, Lisa E. and Brookes, David H. and Wilson, Leighton and Chen, Jiahui and Liles, Karina and Chun, Minju and Li, Peter and Gohara, David W. and Dolinsky, Todd and Konecny, Robert and Koes, David R. and Nielsen, Jens E. and Head-Gordon, Teresa and Geng, Weihua and Krasny, Robert and Wei, Guo-Wei and Holst, Michael J. and McCammon, J. Andrew and Baker, Nathan A.},
+  title   = {Improvements to the {APBS} biomolecular solvation software suite},
+  journal = {Protein Science},
+  year    = {2018},
+  volume  = {27},
+  number  = {1},
+  pages   = {112--128},
+  doi     = {10.1002/pro.3280},
+  verified = {2026-08-11},
 }
 
 % ---------- Bases et outils secondaires -- NON vérifiés indépendamment cette session ----------

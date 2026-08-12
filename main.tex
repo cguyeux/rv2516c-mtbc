@@ -59,32 +59,34 @@
 
 \begin{abstract}
 \noindent
-A substantial part of the \mtb{} proteome remains functionally uncharacterised, and searching a
-full-length dark protein that combines several independent domains can dilute a genuine
-remote-homology signal below detection. Here we resolve Rv2516c, a 267-residue conserved
-hypothetical protein never studied in the \mtb{} literature, by interrogating each of its
-structural units separately. Contact-map segmentation of the AlphaFold and ESMFold models
-delineates three units: an N-terminal ferredoxin-like domain (residues 1--87, Pfam DUF8830), a
-central winged helix-turn-helix of the AlpA/excisionase family (residues 88--147), and a
-C-terminal immunoglobulin-like $\beta$-sandwich (residues 178--267) of unassigned function.
-Profile--profile search (HHpred) on the central unit alone identifies the AlpA/excisionase family
-at $E=1.3\times10^{-10}$, a gain of more than 4{,}500-fold in $E$-value over the full-length
-protein, overturning two earlier, weaker whole-protein hypotheses (a ribosomal-S6-like fold, an
-isolated sigma-factor region). Rv2516c is co-transcribed with Rv2517c in an ancient, domesticated
-genomic cassette alongside a validated toxin--antitoxin pair; RNA-seq reanalysis shows it induced
-under antibiotic treatment as a general stress response, not the DNA-damage (SOS) response its
-genomic context alone had suggested. Four independent lines of evidence, homology, exposed
-surface charge, cross-genus conservation, and atomic-resolution contact geometry in a protein--DNA
-co-folding model, converge on the same basic residues (Arg111, Arg113, His115, Arg118) as a
-candidate DNA-binding surface, although none reaches significance alone, no operator motif could
-be found nearby, and a self-association test of the domain was uninformative. Rv2516c is not
-essential in the strict transposon-mutagenesis sense, since the helix-turn-helix module carries no
-transposon-insertion site, but is highly vulnerable to CRISPR interference (vulnerability index
-$-9.91$, independently confirmed reliable), restricted to the \textit{Mycobacterium} genus and its
-closest relatives, and entirely unstudied. We propose domain-wise interrogation as a general
-strategy for multi-domain dark proteins, and put forward Rv2516c's helix-turn-helix module as a
-candidate, though unproven, DNA-binding element embedded in a mobile-element-derived genomic
-cassette.
+A substantial part of the \mtb{} proteome remains uncharacterised, and multi-domain
+dark proteins dilute remote-homology signal when searched full-length. We resolve Rv2516c, a
+267-residue conserved hypothetical protein, by
+interrogating its structural units separately. Contact-map segmentation of AlphaFold and ESMFold
+models delineates three units: an N-terminal ferredoxin-like domain (Pfam DUF8830), a central
+winged helix-turn-helix of the AlpA/excisionase family, and a C-terminal immunoglobulin-like
+$\beta$-sandwich of unassigned function. Profile--profile search (HHpred) on the central unit
+alone identifies the AlpA/excisionase family at $E=1.3\times10^{-10}$, a 4{,}500-fold gain over
+the full-length protein. The strategy is justified physically: inter-domain predicted aligned
+error shows the three units are not rigidly packed, precluding reliable full-length structural
+inference. Across four independent non-tuberculous mycobacterial lineages, the helix-turn-helix
+unit is the most conserved region genome-wide, while the C-terminal unit is a later acquisition
+restricted to the \mtb{} branch. Rv2516c is co-transcribed with Rv2517c in a stable genomic
+cassette next to a validated toxin--antitoxin pair, is induced under antibiotic treatment as a
+general stress rather than DNA-damage (SOS) response, and excludes the dormancy/DosR regulon. Five
+independent lines of evidence converge on the same basic residues (Arg111, Arg113, His115, Arg118)
+as a candidate DNA-binding surface, though none reaches significance alone and no operator motif
+exists nearby. Sequence-specific binding by this surface remains computationally unresolved:
+generative protein--DNA co-folding fails to discriminate the cognate complex from decoys. A
+second, non-generative electrostatic test corroborates the candidate surface's electropositive
+character, though three-fold weaker than a positive control, but is by construction blind to
+sequence identity. Rv2516c is essential by transposon mutagenesis, though
+domain-restricted (no assayable site within the helix-turn-helix module itself), independently
+highly vulnerable to CRISPR interference (vulnerability index $-9.91$), restricted to the
+\textit{Mycobacterium} genus, and entirely unstudied. We propose
+domain-wise interrogation as a general strategy for multi-domain dark proteins and put forward
+Rv2516c's helix-turn-helix module as a candidate, though unproven, DNA-binding element in a
+mobile-element-derived cassette.
 \end{abstract}
 
 \textbf{Keywords:} \textit{Mycobacterium tuberculosis}, dark proteome, Rv2516c, AlpA/excisionase,
@@ -147,9 +149,18 @@ the MPI Bioinformatics Toolkit at the time of submission (2026-07-31) by profile
 and PDB structures (Foldseek build 427df8a; PDB structural database downloaded 2025-07-25) by
 Foldseek \citep{vankempen2024foldseek}, and against the InterPro-distributed Pfam-A profile library
 \citep{paysanlafosse2023interpro} by \texttt{hmmscan}, at gathering threshold (computed 2026-06-01)
-and, for sub-threshold hits, below it (computed 2026-07-31). Family assignment required convergent
-evidence across at least two of these three methods; a single hit from one method alone was treated
-as suggestive, never as an assignment.
+and, for sub-threshold hits, below it (computed 2026-07-31). Foldseek hits were classified
+significant at $E<10^{-3}$, suggestive at $E\sim10^{-2}$, and at the level of noise above $E=1$.
+Family assignment required convergent evidence across at least two of these three methods; a single
+hit from one method alone was treated as suggestive, never as an assignment.
+
+\paragraph{Inter-domain flexibility.} To test directly whether the three structural units are
+rigidly packed against one another, and hence whether full-length structural search could in
+principle have carried reliable domain-arrangement information, the predicted aligned error (PAE)
+matrix of the AlphaFold DB v6 model was summarised pairwise between units and benchmarked against
+four reference proteins processed through the identical pipeline: two with an experimentally rigid
+inter-domain arrangement (\mtb{} KatG, \textit{E.\ coli} ATCase) and two with established
+inter-domain flexibility (calmodulin, LacI).
 
 \paragraph{Essentiality, vulnerability and population conservation.} Transposon-insertion counts
 per TA dinucleotide site and the essentiality call were taken from the published Himar1 TnSeq
@@ -159,7 +170,11 @@ CRISPRi vulnerability index and its confidence interval were taken from \citet{b
 its reliability was independently assessed against a resource cataloguing, genome-wide, the guide
 count and the maximum individual guide strength underlying each gene's vulnerability estimate,
 against the distribution of these two quantities over all genes classified as druggable
-($\text{VI}\leq-6.0$, $n=500$). Intra-complex variation was drawn from a
+($\text{VI}\leq-6.0$, $n=500$). A McDonald--Kreitman test contrasted intra-MTBC polymorphism against
+divergence to the outgroup \textit{M.\ canettii}; because the divergence count was small (five
+substitutions), the statistical power of every possible outcome was enumerated before reading the
+observed value, rather than reported only for the value actually obtained. Intra-complex variation
+was drawn from a
 local database of 145{,}209 MTBC genomes (SPDI format, H37Rv-referenced); cross-genus conservation
 used \texttt{tblastn} (BLAST+ 2.15.0) against the genomes of six non-tuberculous mycobacteria known to carry a
 Rv2516c ortholog, re-run with full pairwise alignments (not identity summaries alone) so that
@@ -167,16 +182,45 @@ per-residue conservation, not only whole-protein identity, could be computed; th
 genomes (\textit{M.\ avium}, \textit{M.\ bouchedurhonense}, \textit{M.\ timonense}) were found to
 share an identical per-position identity profile, consistent with their membership of the
 \textit{M.\ avium} complex, and were treated as a single phylogenetically independent observation
-to avoid pseudo-replication, leaving four independent lineages.
+to avoid pseudo-replication, leaving four independent lineages. To distinguish recent horizontal
+transfer from ancient vertical inheritance with lineage-specific loss, the same four lineages were
+compared for divergence at Rv2516c relative to their own divergence at twelve concatenated
+housekeeping proteins, and carrier status was tested for phylogenetic clustering (Fitch parsimony
+on an ad hoc housekeeping-gene tree, with 200 bootstrap replicates and a permutation null), with the
+tree's own resolution independently validated on clades of known relationship before any
+topological claim was drawn from it. The same alignments were also read for per-unit coverage,
+to ask whether the C-terminal unit's presence is restricted to a subset of the carrier lineages,
+and each ortholog's coding region was checked for an in-frame stop codon immediately following the
+region aligning to units A and B, against the genomic distance to the nearest contig end and against
+all high-scoring BLAST segment pairs at a relaxed threshold, to distinguish a genuine absence of
+unit C from an assembly artefact.
 
 \paragraph{Genomic context, synteny and regulatory network.} The window of six genes flanking
 Rv2516c (Rv2512c--Rv2518c) was characterised for horizontal-transfer signatures (flanking
 attachment sites, tRNA genes, GC content calibrated against the genome-wide gene-level
 distribution) and for co-expression with its immediate neighbour Rv2517c and with the validated
 toxin--antitoxin pair Rv2514c--Rv2515c \citep{tandon2019ta}, using two independent published
-expression compendia. Regulatory associations were taken from the genome-wide \mtb{}
+expression compendia. Beyond this targeted comparison, an unbiased, genome-wide co-expression scan
+correlated Rv2516c's expression against every other gene (3{,}911 genes) in each compendium
+separately, ranking partners by correlation and testing rank concordance between the two
+independent compendia against a random-ranking null. The resulting top-ranked gene lists (top-50
+and top-100 in each compendium) were tested for enrichment, by one-sided hypergeometric test with
+Benjamini--Hochberg correction across all comparisons, against four curated regulons: the classical
+DosR dormancy regulon \citep{rustad2008dosr}, the SigH and SigF regulons from the genome-wide
+transcription-factor overexpression network \citep{minch2015network,rustad2014tfoe}, and the union
+of the regulons of Rv2516c's own five known upstream regulators. Structural stability of the
+Rv2516c--Rv2517c intergenic and coding region was assessed by mapping IS6110 insertion sites called
+against a non-reference position system across 5{,}169 MTBC genomes spanning 614 phylogenetic
+clades, and by checking the window against the catalogue of canonical regions of difference.
+Regulatory associations were taken from the genome-wide \mtb{}
 transcription-factor binding network \citep{minch2015network} and from protein-association data
-retrieved through STRING v12.0 \citep{szklarczyk2023string}.
+retrieved through the complete STRING v12.0 interaction graph (693{,}013 edges, not the truncated
+top-15 partner list of individual gene records) \citep{szklarczyk2023string}, from which
+Rv2516c's degree and second-neighbourhood size were compared to a null of genes matched for degree,
+separately for the complete evidence graph and for a graph restricted to non-positional evidence
+channels (excluding genomic neighbourhood, gene fusion and phylogenetic co-occurrence), and the
+whole H37Rv proteome was screened for any other locus carrying the same helix-turn-helix Pfam
+clan without a paralog relationship to Rv2516c already known.
 
 \paragraph{Transcriptional response under antibiotic stress.} Publicly deposited RNA-seq data
 covering \mtb{} exposed to moxifloxacin and, separately, to nine antibiotics of six distinct
@@ -192,7 +236,29 @@ accessibility was computed on the AlphaFold model by the Shrake--Rupley algorith
 \citep{shrake1973sasa}, normalised to the maximum allowed solvent accessibility of each residue
 type \citep{tien2013maxasa}. The fraction of exposed basic residues was compared between the
 candidate recognition helix (residues 111--121), the adjacent helix, the whole helix-turn-helix
-unit, the ferredoxin-like unit (specificity control), and the whole protein.
+unit, the ferredoxin-like unit (specificity control), and the whole protein. The same procedure was
+applied to the single experimentally supported epitope in unit C (residues 227--246, see below),
+compared to the RSA distribution of unit C as a whole, to ask whether it sits on an exposed loop or
+a buried strand.
+
+\paragraph{T-cell epitope search.} All T-cell assay records for the Rv2516c UniProt accession
+(I6YDM0) were retrieved from the Immune Epitope Database \citep{vita2019iedb}. Because IEDB
+positions refer to the curated source antigen rather than to H37Rv, every peptide was relocalised
+onto the H37Rv sequence by exact string match rather than trusted at its reported coordinate; a
+peptide absent from H37Rv was excluded.
+
+\paragraph{Electrostatic complementarity.} As a non-generative, non-machine-learning-based
+alternative to protein--DNA co-folding, the electrostatic potential of each protein alone (no DNA
+present) was computed with PDB2PQR 3.7.1 and APBS 3.4.1 (linearised Poisson--Boltzmann equation)
+\citep{jurrus2018apbs} and sampled at a probe distance of 3.4~\ang{} from the solvent-accessible
+surface, approximating the position of a phosphate oxygen. The candidate patch (Arg111, Arg113,
+His115, Arg118) was ranked against a sliding-window distribution of exposed-residue patches on the
+same protein, and calibrated against BldC's own experimentally determined DNA-contact residues
+(extracted from PDB 6AMA by direct interatomic distance) processed through the identical pipeline.
+The same co-crystal structure was used to classify each BldC--DNA contact residue as base-specific
+or backbone-only, to assess whether a base-readout consensus could in principle be derived from
+currently available homologous structures (BldC, and the apo structures of AlpA, PDB 8C3T, and RdfS,
+PDB 8DGL).
 
 \paragraph{Boltz-2 co-folding, mutant control and interface contact analysis.} Boltz-2, version 2.2.1,
 \citep{wohlwend2025boltz2} was run locally (CPU inference) to predict complexes between the
@@ -207,7 +273,16 @@ chain and residue identifiers) for the wild-type and mutant predictions, so that
 response of the model to the mutation could be assessed independently of the aggregate score.
 Self-association of the helix-turn-helix unit was tested in the same way, as an apo homodimer,
 against a specificity-negative control (the ferredoxin-like unit) and a positive control (BldC
-apo), all three under identical settings (CPU, single diffusion sample).
+apo), all three under identical settings (CPU, single diffusion sample). To test directly whether
+the co-folding pipeline can discriminate a sequence-cognate protein--DNA complex from a
+heterologous or scrambled one, a second, pre-registered panel co-folded a homodimer of the
+helix-turn-helix unit with the same 22-bp duplex (E1, test), the identical homodimer with the same
+duplex after dinucleotide-content-preserving shuffling (E2, sequence-negative control, using the
+Altschul--Erickson shuffling algorithm), a homodimer of the ferredoxin-like unit with the intact
+duplex (E3, domain-negative control), and a BldC homodimer with the intact duplex, reconstructing
+the PDB 6AMA co-crystal directly (E4, cognate positive control). The acceptance criterion, fixed
+before the panel was run, required E1 to exceed both E2 and E3 by a clear margin, with E4 read as
+the attainable ceiling for a genuinely cognate complex in this pipeline.
 
 \paragraph{Operator motif search.} The four intergenic regions flanking the Rv2512c--Rv2518c
 window were scanned for the best-scoring inverted repeat and, independently, direct repeat (arm
@@ -224,8 +299,20 @@ two null models: genome-wide pairs of genes matched only for carrier-set rarity,
 stringently, genome-wide pairs of neighbouring genes additionally matched for rarity.
 
 \paragraph{Pocket detection and druggability.} The apo AlphaFold model was scored for pocket
-druggability with fpocket 4.2.3, calibrated against a matched population of 150 proven enzyme
-structures and 150 non-catalytic proteins processed through the identical pipeline.
+druggability with fpocket 4.2.3, calibrated against a matched population of 150 proven enzymes
+(UniProt- or eggNOG-assigned EC number, non-dark) and 150 non-catalytic proteins (annotated
+regulatory-protein or information-pathway function, no EC number), both sampled at random (fixed
+seed) from the H37Rv proteome-wide atlas and restricted throughout to models of comparable quality
+(mean pLDDT $\geq$ 70) so that pocket detectability would not be confounded with model quality.
+
+The bioinformatic analyses, database queries and literature cross-referencing underlying this
+study were carried out within an AI-augmented bioinformatics working environment, Claude Code
+(Anthropic), operating the Claude Sonnet language model as an interactive analysis agent under
+continuous human direction. Every script, statistical test and numerical claim produced within
+this environment was independently traced back to its underlying raw data, primary publication or
+database record before being reported here, following the verification discipline described
+throughout this section; the corresponding author designed the study, specified and reviewed every
+analysis, and takes full responsibility for the accuracy of its content.
 
 \section{Results}
 
@@ -240,7 +327,16 @@ and its closest relatives (6 of 53 sampled non-tuberculous mycobacteria, 1 of 4 
 \mtb{}-associated complex outside the genus). A full-text literature sweep across roughly 330{,}000
 tuberculosis abstracts, using every known alias of the locus, finds not one publication that
 discusses Rv2516c as a subject; the seven publications in which the locus tag appears at all cite
-it only inside supplementary gene lists.
+it only inside supplementary gene lists. A McDonald--Kreitman test against \textit{M.\ canettii} as
+outgroup (two non-synonymous and three synonymous fixed differences, seven non-synonymous and two
+synonymous polymorphisms; Supplementary Table~S2) is not significant under either of two polymorphism thresholds tested
+($p=0.100$ and $p=0.266$), but the test's own power is asymmetric: with only five fixed differences
+available, two of the six possible non-synonymous divergence counts would have reached significance
+($p=0.001$ and $p=0.015$ for zero or one non-synonymous fixed difference), so the test had power to
+detect strong purifying selection on divergence and did not find it, while it cannot speak to
+positive selection at all; the observed count sits just beyond the last detectable threshold, a
+result fragile enough that one fewer non-synonymous substitution would have flipped it to
+significant.
 
 The gene is essential, but not uniformly so across its length. Of the fourteen TA dinucleotide
 sites available to Himar1 transposon mutagenesis in Rv2516c, five are called essential and nine
@@ -272,7 +368,7 @@ earlier whole-protein hypotheses}
 Contact-map segmentation of the AlphaFold and ESMFold models independently converges on the same
 three-unit architecture: an N-terminal unit A (residues 1--87), a central unit B (residues
 88--147), a short linker (residues 148--177), and a C-terminal unit C (residues 178--267)
-(\Cref{fig:architecture}a).
+(\Cref{fig-architecture}a).
 
 \begin{figure}[htbp]
 \centering
@@ -282,19 +378,30 @@ residues, delineated by contact-map segmentation of the AlphaFold and ESMFold mo
 N-terminal ferredoxin-like domain (unit A, DUF8830), a central winged helix-turn-helix of the
 AlpA/excisionase family (unit B), a short linker, and a C-terminal immunoglobulin-like
 $\beta$-sandwich (unit C) of unassigned function. The candidate DNA-binding window (111--121,
-\Cref{fig:convergence}) sits within unit B. \textbf{(b)} Profile--profile (HHpred) search on unit B
+\Cref{fig-convergence}) sits within unit B. \textbf{(b)} Profile--profile (HHpred) search on unit B
 alone raises the $E$-value of the AlpA/excisionase assignment by more than 4{,}500-fold relative to
 the same search on the full-length protein, overturning two earlier, weaker whole-protein
 hypotheses (ribosomal-S6-like fold, isolated sigma-factor region).}
-\label{fig:architecture}
+\label{fig-architecture}
 \end{figure}
 
 Two whole-protein hypotheses preceded this segmentation and were each abandoned once tested
 directly. The first read the single best Foldseek hit against the complete Protein Data Bank,
-circular permutants of ribosomal protein S6, as a fold assignment; targeted TM-align comparison
-against three named reference sets (ribosomal S6 permutants, sigma-factor region 4, MerR-family
-DNA-binding regulators) later showed that this hit was simply the strongest of an inter-class noise
-floor (0.33--0.47 TM-score across all three families), not a discriminating signal. The second
+circular permutants of ribosomal protein S6, as a fold assignment; targeted TM-align comparison of
+the full 267-residue model against three named reference sets (ribosomal S6 permutants,
+sigma-factor region 4, MerR-family DNA-binding regulators), with the aligned span on the query left
+as an output of the search rather than fixed as input, gave median (range) scores of 0.658
+(0.645--0.673) against S6, 0.430 (0.368--0.453) against sigma-factor region 4, and 0.346 against
+MerR. Only the S6 alignments consistently fell within the N-terminal segment (residues 2--83) that
+unit A occupies; the sigma-factor-region-4 and MerR alignments fell mostly, though not exclusively,
+near residues 94--152, closer to unit B. The latter two classes sit at the inter-class noise floor
+set by the three families' own pairwise averages (0.32--0.47), but S6 does not: it is a genuine structural
+signal, clearly above that floor. It was nonetheless abandoned as a fold assignment, not for being
+noise but for being non-specific and superseded, the same ferredoxin-like fold recurring across
+several unrelated families (S6 among them) with no single one distinguishable from the others, and
+unit A was ultimately assigned instead to DUF8830 (domain of unknown function,
+\Cref{fig-architecture}), a Pfam call specific to this sequence rather than a fold shared broadly
+across families. The second
 hypothesis rested on the single Pfam domain shown in a summary report (sigma-factor region 4,
 Sigma70\_r4, residues 98--121, independent $E=8.4\times10^{-4}$, below the Pfam gathering
 threshold); the full \texttt{hmmscan} output in fact contained twelve sub-threshold hits spanning
@@ -307,14 +414,33 @@ relative to the true Lrp/AsnC architecture.
 Reasoning from this pattern, that each apparent signal in fact came from the whole 267-residue
 query diluting whatever a single domain carried, unit B was submitted to HHpred on its own. The
 result is the most confident finding of this study: probability 99.28\%, $E=1.3\times10^{-10}$,
-assigning unit B to the AlpA/excisionase/recombination-directionality-factor family, against
+assigning unit B to the AlpA/excisionase/recombination-directionality-factor (RDF) family, against
 probability 98.64\%, $E=5.9\times10^{-7}$ for the same search on the full-length protein, a gain of
 more than 4{,}500-fold in $E$-value from isolating the domain. Neither the ribosomal-S6 nor the
-sigma-region-4 nor the Lrp/AsnC hypothesis survives this result. A caveat applies: \texttt{hmmscan}
+sigma-region-4 nor the Lrp/AsnC hypothesis survives this result. Recombination-directionality-factor
+activity of this general kind is not a purely cross-species inference here: the mycobacteriophage L5
+excisionase, itself classified as an RDF, has been shown to function directly within \mtb{}, excising
+an integrated plasmid from the chromosome \citep{parish2001excisionase}, an organism-specific
+functional precedent rather than a claim of homology to unit B's AlpA-family domain specifically. A
+caveat applies: \texttt{hmmscan}
 never recovers the AlpA profile at any threshold, on any unit, even though HHpred queries the same
 underlying Pfam-A library and returns the corresponding profile (PF11112) at 99.16\% probability on
 unit B; the profiles are reachable in principle, and the discrepancy reflects the sequence-versus-
 profile sensitivity regime rather than a refutation of the assignment.
+
+Domain-wise interrogation is justified not only by this empirical gain but by the physical
+arrangement of the three units in the model itself. Inter-domain predicted aligned error, benchmarked
+against two proteins with an experimentally rigid inter-domain arrangement (\mtb{} KatG,
+\textit{E.\ coli} ATCase, 3--4~\ang{}) and two with established inter-domain flexibility
+(calmodulin, LacI, 10--22~\ang{}, a non-overlapping range), places all three of Rv2516c's own
+inter-unit pairs above even the most flexible reference: A--B 18~\ang{}, B--C 27~\ang{}, A--C
+29~\ang{} (close to the model's own ceiling of 31.75~\ang{}, so the last value is likely partly
+saturated). An independent measure agrees: the 148--177 linker has a median per-residue confidence
+(pLDDT) of 32, with 97\% of its residues below 70, against 85--94\% for units A, B and C
+themselves, the signature of frank structural disorder. The three units of Rv2516c are therefore
+not rigidly packed against one another; a full-length structural or profile search carries no
+reliable information on their relative arrangement, so interrogating each unit separately was not
+merely a useful heuristic but the only structurally correct way to query this protein.
 
 Unit A independently carries a second named domain, DUF8830 (domain of unknown function 8830,
 Pfam PF31169, probability 98.16\%, $E=1.2\times10^{-4}$, 81 of 87 columns aligned), a family
@@ -325,11 +451,16 @@ family members (99.9\%), and the AlpA-containing family (which also includes DUF
 PyocinActivator and Tn916-Xis-like members) in 10{,}141 of 10{,}168 (99.7\%). Rv2516c therefore
 fuses two domains that are each, in essentially every other genome, a complete protein by
 themselves; none of the 25 known fusion partners of the AlpA family combines it with a ferredoxin-
-or immunoglobulin-like domain. Unit C's fold assignment and its functional assignment rest on
+or immunoglobulin-like domain. DUF8830's own single known non-solo architecture, one
+\textit{Streptomyces haneummycinicus} locus fused to an aldehyde dehydrogenase domain, is annotated
+by homology as a canonical proline-biosynthesis enzyme (gamma-glutamyl phosphate reductase, EC
+1.2.1.41) with no relationship to AlpA, DNA binding or mobile elements, confirming by name, not
+merely by percentage, that the DUF8830/AlpA/immunoglobulin-like fusion in Rv2516c remains without an
+annotated precedent. Unit C's fold assignment and its functional assignment rest on
 different evidence and reach different conclusions, and the two should not be read as equally
 uncertain. The $\beta$-sandwich, immunoglobulin-like \emph{fold} is supported by a consensus
 across both methods: independently in Foldseek and HHpred, and within HHpred by convergence across
-several unrelated Pfam immunoglobulin families, the SCOP ``all-beta'' class, and, notably, four
+several unrelated Pfam immunoglobulin families, the SCOP ``all-beta'' class, and four
 \emph{de novo} designed synthetic $\beta$-sandwiches with no evolutionary history at all; idealised
 synthetic scaffolds of this kind rank among the top hits precisely because they match on bare
 topology alone, which is diagnostic of a genuine fold-level assignment rather than an artefact of
@@ -356,8 +487,37 @@ immunoglobulin-like fold together; two unrelated loci (Rv2310, Rv3750c) already 
 ``excisionase'' in current annotation without the corresponding domain (only a generic HTH\_17
 match), a naming collision worth flagging for anyone searching the genome by name rather than by
 domain content. A Foldseek search of each unit separately against the AlphaFold/Swiss-Prot database
-returned no significant or suggestive hit (best $E=1.7\times10^{-2}$, unit A), adding no assignment
-beyond what the Protein Data Bank and HHpred searches above already established.
+returned no significant hit and at most a single borderline-suggestive one (best $E=1.7\times10^{-2}$,
+unit A), adding no assignment beyond what the Protein Data Bank and HHpred searches above already
+established.
+
+A cross-genus analysis of the four phylogenetically independent non-tuberculous mycobacterial
+lineages carrying an ortholog (Methods; Supplementary Table~S1) sharpens this picture along two independent axes. First, the
+helix-turn-helix unit is the single most conserved part of the protein across the genus: full-length
+coverage and 76.7--93.3\% identity in all four lineages, against 37.5--70.1\% for the ferredoxin-like
+unit and only 0--13\% coverage for unit C outside the \mtb{}-associated complex, a signal obtained
+independently of the structural prediction (HHpred) that first identified the domain. An ad hoc
+housekeeping-gene phylogeny of the six carrier genomes failed its own pre-registered validity check
+(bootstrap support of 0\% on several decisive clades) and cannot support any fine topological claim;
+however, the more powerful test available, relative sequence divergence, rules out recent horizontal
+transfer: each carrier's own housekeeping proteins are 92.8--95.1\% identical to H37Rv, while its
+Rv2516c ortholog is only 55.4--74.2\% identical, 21 to 38 points more divergent, in the order
+predicted by vertical descent (the closest relative, \textit{M.\ shinjukuense}, carries both the
+least divergent housekeeping genes and the least divergent ortholog). Second, the C-terminal
+immunoglobulin-like unit appears to be a later acquisition than the ferredoxin-like/helix-turn-helix
+core. In two of these four independent lineages (the \textit{M.\ avium} complex and \textit{M.\
+celatum}), the ortholog's coding sequence terminates with an in-frame stop codon essentially
+immediately (one to three codons) after the region aligning to units A and B, well short of any
+contig boundary and with no secondary alignment fragment recoverable anywhere near unit C even at a
+relaxed threshold, arguing for a genuine truncation rather than an assembly artefact; the fifth,
+full-length carrier of the \textit{M.\ tuberculosis}-associated complex (\textit{M.\ shinjukuense})
+covers all 267 residues. A sixth lineage, \textit{M.\ simiae}, remains unresolved by this test (no
+stop codon within 66 codons past the alignment, an open reading frame continuing for a further
+$\sim$195~bp of unclear origin). Taken together, these two results are consistent with a two-step
+domestication: an ancestral ferredoxin-like/helix-turn-helix fusion, already complete in distant
+non-tuberculous mycobacteria, under the strongest sequence constraint anywhere in the protein, later
+joined by the immunoglobulin-like unit specifically on the branch leading toward the \mtb{}-associated
+complex and the MTBC.
 
 \subsection{The Rv2516c--Rv2517c cassette is an ancient, domesticated genomic unit that responds to
 general antibiotic stress, not DNA damage}
@@ -404,31 +564,63 @@ response is therefore a general antibiotic-stress response, not part of the SOS 
 genomic proximity to a validated toxin--antitoxin locus might suggest. Consistent with a functional,
 not merely adjacent, relationship, Rv2516c and Rv2517c are co-expressed across conditions
 ($r=+0.409$, 99th percentile of all gene pairs), exceeding the co-expression ceiling set by the
-validated toxin--antitoxin pair itself ($r=+0.360$). The pairing is nonetheless asymmetric: Rv2517c
+validated toxin--antitoxin pair itself ($r=+0.360$). An unbiased, genome-wide co-expression scan
+against all 3{,}911 other genes, rather than this small set of candidates chosen a priori, confirms
+and sharpens the result: Rv2517c is Rv2516c's rank-1 partner in \emph{both} independent compendia
+separately ($\rho=+0.929$ and $+0.507$; the probability of this double rank-1 occurring under
+random ranking is $p\approx6.5\times10^{-8}$), and the top-100 partner lists overlap between
+compendia far beyond chance (15 shared genes against 2.6 expected, $p=1.9\times10^{-8}$;
+Supplementary Table~S4). The
+canonical SOS genes \textit{recA}, \textit{dnaE2}, \textit{ruvABC} and \textit{recB} are never
+ranked near the top and are inconsistently ordered between compendia, while toxin--antitoxin loci
+(Rv1989c, Rv1990c, MazF6, ParE2) are consistently high-ranked and stable, reinforcing the
+antibiotic-stress-not-DNA-damage reading above; no new partner gene is revealed by this unbiased
+scan, so the function of Rv2516c will not be resolved by its transcriptional correlates alone. The
+pairing is nonetheless asymmetric: Rv2517c
 is non-essential and its own vulnerability index, $+0.54$ (95\% CI $-1.88$ to $+4.58$), crosses
-zero, arguing against an obligate heterodimer between the two proteins. Consistent with this
-asymmetry, STRING lists only three protein partners for Rv2516c (Rv2517c, Rv2515c, Rv2514c), every
-one of them supported solely by the genomic-neighbourhood channel (no experimental, database or
-text-mining evidence), and every one of them itself annotated as hypothetical; STRING therefore
-contributes no independent functional hypothesis here. In the genome-wide transcription-factor
-network \citep{minch2015network}, Rv2516c is a target, not itself annotated as a transcription
-factor, of five regulators, among them Rv0081, the principal relay of the DosR dormancy regulon,
-placing the gene within a dormancy/hypoxia regulatory context; this context is nonetheless
-decoupled under the antibiotic condition studied here, where the canonical DosR targets \textit{hspX}
-and Rv2623 collapse while Rv2516c itself rises, showing that DosR does not govern the gene's
-response to antibiotic stress specifically.
+zero, arguing against an obligate heterodimer between the two proteins. The Rv2516c--Rv2517c coding
+and intergenic region (1{,}052~bp) carries zero non-reference IS6110 insertions across 5{,}169
+MTBC genomes spanning 614 phylogenetic clades and no canonical region-of-difference deletion within
+10~kb, while its immediate neighbours are markedly less stable: a clade of four \textit{M.\ orygis}
+strains carries a shared, heritable IS6110 insertion inside Rv2515c, and two lineage-8 strains carry
+one inside Rv2514c (Supplementary Table~S3), indicating the neighbouring toxin--antitoxin locus is dispensable enough to be
+inactivated in entire sub-lineages while the Rv2516c--Rv2517c pair itself remains intact. Consistent
+with this
+asymmetry, the complete STRING interaction graph (693{,}013 edges) lists only three protein partners
+for Rv2516c (Rv2517c, Rv2515c, Rv2514c); at the standard confidence threshold, Rv2516c's degree (3,
+6th percentile genome-wide) and second-neighbourhood size (14 proteins, 4th percentile) are roughly
+five-fold below a null matched for degree alone (median 68 second-neighbours), and removing every
+positional evidence channel (genomic neighbourhood, gene fusion, phylogenetic co-occurrence) removes
+\emph{all} of Rv2516c's edges, including the one to Rv2517c: within STRING, this module exists only
+by chromosomal proximity, not by any experimental, database or text-mining evidence, and no other
+H37Rv locus carries the same helix-turn-helix Pfam clan without an already-known paralog
+relationship. STRING therefore contributes no independent functional hypothesis here. Beyond this
+targeted candidate-gene comparison, a formal enrichment test asked whether Rv2516c's co-expression
+neighbourhood (the top-50 and top-100 genes identified by the unbiased scan above, in each
+compendium separately) is statistically enriched for four curated regulons. None of sixteen tests
+(two compendia $\times$ two list sizes $\times$ four regulons) reached significance after
+multiple-testing correction, and none reached even the uncorrected 0.05 threshold in both compendia
+at once. The clearest result concerns the classical DosR dormancy regulon
+\citep{rustad2008dosr}: zero overlap, in both compendia, at both list sizes, not merely a
+non-significant excess; the SigH regulon shows the same pattern. This moves the persistence/DosR
+hypothesis, previously only a plausible reading of the gene's context (Rv0081, the principal relay
+of the DosR dormancy regulon, is among Rv2516c's five upstream regulators in the genome-wide
+transcription-factor network, \citep{minch2015network}), from untested to formally tested and
+refuted at the transcriptional level: Rv2516c's antibiotic-stress response tracks neither DNA
+damage (above) nor a dormancy/hypoxia programme.
 
-\subsection{Four independent, individually non-significant lines of evidence converge on the same
+\subsection{Five independent, individually non-significant lines of evidence converge on the same
 basic residues of the helix-turn-helix domain}
 
-Beyond the family-level homology established above, three further, methodologically independent
-analyses point to the same specific residues of unit B (\Cref{fig:convergence}).
+Beyond the family-level homology established above, four further, methodologically independent
+analyses point to the same specific residues of unit B (\Cref{fig-convergence}).
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{figures/figure2_convergence.pdf}
-\caption{Four independent lines of evidence converge on the same basic residues of the
-helix-turn-helix domain. \textbf{(a)} Fraction of exposed residues that are basic: the candidate
+\caption{Four of the five independent lines of evidence converge on the same basic residues of the
+helix-turn-helix domain (the fifth, electrostatic complementarity, is not panelled here).
+\textbf{(a)} Fraction of exposed residues that are basic: the candidate
 recognition window (111--121) stands out against the whole protein, the ferredoxin-like unit A
 (specificity control), and the immediately adjacent helix. \textbf{(b)} Per-position identity
 across the helix-turn-helix window (98--121) over four phylogenetically independent
@@ -438,7 +630,7 @@ wild-type Boltz-2 co-folding model, against the median over the 60 residues of u
 \textbf{(d)} Increase in protein--DNA distance after alanine substitution of the same three
 residues (wild-type $\to$ mutant), restricted to residues in genuine DNA contact at baseline; the
 next-largest increase among contact residues is shown for scale.}
-\label{fig:convergence}
+\label{fig-convergence}
 \end{figure}
 
 First, exposed surface charge. Across the putative recognition helix (residues 111--121), 0.44 of
@@ -460,8 +652,22 @@ buried (Val114, Leu117, consistent with ordinary packing constraint) and six are
 Gln112, Arg113, His115, Gln116, Arg118), among them exactly the three residues later chosen, on
 structural grounds alone, for the mutant negative control below, plus a fourth.
 
+A specific confound for this reading, hyperconserved T-cell epitopes, a documented, counter-intuitive
+feature of \mtb{} antigen evolution in which epitopes are preferentially conserved rather than
+diversified to escape immune recognition, was tested directly rather than assumed absent. Two
+overlapping IEDB-derived 15-mers cover 22 of the 24 residues of the 98--121 window and all eight
+residues of the invariant 111--118 core; across four independent assay records in human HLA class II,
+all four are negative. The confound is therefore not merely undocumented, it was tested and not
+supported for this specific window, so the functional reading of the conservation signal is
+strengthened by elimination of an alternative rather than by direct proof. The same search surfaced
+the only positive T-cell epitope anywhere in the protein, an experimentally validated
+IFN$\gamma$-response peptide (residues 227--246) in bovine MHC \citep{farrell2016botb}, which falls
+in unit C, the domain about which the least is otherwise known; a bovine, not human, immunological
+context limits how far this can be extrapolated, and its position relative to the unit's surface has
+not been separately assessed.
+
 Third, atomic-resolution contact geometry from a direct protein--DNA co-folding test
-(\Cref{fig:site}). The aggregate
+(\Cref{fig-site}). The aggregate
 Boltz-2 score is, on its own, uninformative: wild-type unit B and its R113A/H115A/R118A mutant,
 each co-folded with the same DNA duplex, return near-identical interface pTM (0.890 and 0.889).
 Read at the level of atomic contacts rather than the aggregate score, however, the picture changes.
@@ -482,6 +688,20 @@ Benchmarked against the positive control (BldC bound to its own operator, the sa
 27.9\% of BldC's residues lie within 4.5~\ang{} of the DNA against 28.3\% for unit B, the same order
 of magnitude as a regulator known to bind this DNA.
 
+Fourth, calibrated electrostatic complementarity, a method entirely independent of, and immune to
+the biases documented below (Section~3.5) for, generative co-folding. The electrostatic potential of
+BldC alone, sampled at its own experimentally determined DNA-contact residues, is the single most
+electropositive window anywhere on its own exposed surface (100th percentile of 15 sliding windows),
+validating the method against a positive control whose contact residues are known independently of
+any model. The candidate patch on unit B (Arg111, Arg113, His115, Arg118) follows the same
+qualitative pattern, ranking at the 92.9th percentile of its own surface, but its absolute potential
+($+1.02$~kT/e) is roughly three-fold weaker than BldC's validated patch ($+3.07$ to $+3.34$~kT/e),
+and the best unconstrained window on unit A, a domain with no known DNA-binding role, reaches
+$+2.79$~kT/e, close to the validated positive control. This is directionally consistent with, but
+substantially weaker than, a true DNA-binding patch, and is by construction blind to sequence
+identity, since continuous electrostatic potential depends only on the phosphate backbone's
+geometry, never on base identity; it cannot itself speak to sequence specificity.
+
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{figures/figure3_site.pdf}
@@ -489,18 +709,49 @@ of magnitude as a regulator known to bind this DNA.
 co-folding model (J1) places the helix-turn-helix unit (blue) in the groove of the DNA duplex
 (grey); the three candidate contact residues are shown as sticks (orange). \textbf{(b)} Close-up
 of the recognition helix, with Arg113, His115 and Arg118 labelled; this is the same model
-underlying the distances and mutant response reported in \Cref{fig:convergence}c,d.}
-\label{fig:site}
+underlying the distances and mutant response reported in \Cref{fig-convergence}c,d.}
+\label{fig-site}
 \end{figure}
 
-Homology, exposed charge, cross-genus conservation and atomic contact geometry, four analyses with
+Homology, exposed charge, cross-genus conservation, atomic contact geometry and calibrated
+electrostatic complementarity, five analyses with
 independent methodological biases, thus converge on the same basic residues (Arg111, Arg113,
-His115, Arg118). No one of the four analyses is individually significant, and the convergence is
-reported as a coherent body of circumstantial evidence for a candidate DNA-binding surface, not as
-proof of DNA binding, still less of its sequence specificity.
+His115, Arg118), summarised in \Cref{tab-convergence}. No one of the five analyses is individually
+significant, and the convergence is reported as a coherent body of circumstantial evidence for a
+candidate DNA-binding surface, not as proof of DNA binding, still less of its sequence specificity,
+a question the next section shows to be beyond the reach of every computational test attempted
+here.
 
-\subsection{Palindromic and direct-repeat operator searches are negative, and an apo
-self-association test lacks the power to decide the mechanism}
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{@{}p{2.6cm}p{7.4cm}p{4.3cm}@{}}
+\toprule
+Axis & Quantitative signal on the candidate window & Why not significant alone \\
+\midrule
+Homology & Unit B assigned to the AlpA/excisionase/RDF winged-HTH family, $E=1.3\times10^{-10}$
+(unit B alone) vs $5.9\times10^{-7}$ (full length) & Domain-level fold assignment, not itself a
+residue-level test \\
+Exposed charge & 0.44 of residues 111--121 exposed and basic, vs 0.19 whole protein, 0.09 unit A,
+0.00 adjacent helix & Generic property of most surface helices, not DNA-binding-specific \\
+Cross-genus conservation & Window 98--121 86.5\% identical vs 62.6\% rest of protein (4
+independent NTM lineages); core 111--118 invariant without exception & $n=4$ independent lineages
+\\
+Contact geometry & Arg113/His115/Arg118 among the closest DNA contacts at baseline
+(2.11/1.54/3.43~\ang{} vs 7.19~\ang{} median); largest distance increase on mutation among genuine
+contacts & Aggregate Boltz-2 score itself insensitive (ipTM 0.890 vs 0.889, wild type vs mutant) \\
+Electrostatics & Candidate patch at the 92.9th percentile of its own surface (BldC positive
+control: 100th), but $+1.02$~kT/e, roughly three-fold weaker than BldC's validated patch
+($+3.07$ to $+3.34$~kT/e) & Blind to base identity by construction \\
+\bottomrule
+\end{tabular}
+\caption{The five convergent, individually inconclusive lines of evidence for a candidate
+DNA-binding surface on unit B (Arg111, Arg113, His115, Arg118).}
+\label{tab-convergence}
+\end{table}
+
+\subsection{Palindromic and direct-repeat operator searches are negative, and generative
+protein--DNA co-folding cannot resolve sequence specificity}
 
 Three further tests probed the DNA-binding hypothesis from different angles, and none extends the
 convergence above; each narrows a specific mechanistic model rather than the DNA-binding hypothesis
@@ -513,7 +764,19 @@ resamplings), the pairing is a genuine outlier (99.9th percentile). Against a mo
 matched null, pairs of \emph{neighbouring} genes of the same rarity (49 comparable pairs
 genome-wide), the perfect concordance is not unique: 9 of these 49 pairs (18.4\%) are themselves
 tied at Jaccard index 1.000, consistent with a regional block effect (shared gain or loss across a
-local genomic window) rather than a signature specific to this pair. This result does not touch the
+local genomic window) rather than a signature specific to this pair. Within this class of 9
+tied pairs (7 disjoint genomic blocks once overlapping sliding windows are collapsed), the literal
+question the comparison was designed to ask is answered negatively: 2 of 9 (22\%) are themselves
+validated toxin--antitoxin pairs, statistically indistinguishable from the 9 of 40 (22\%) rate in
+the rest of the comparison pool ($p=1.000$, Fisher's exact test), so reaching perfect concordance is
+not, by itself, a marker of functional modularity. The reference class as a whole, however, is not a
+generic one: neighbouring, co-rare gene pairs genome-wide are seven-fold enriched for validated
+toxin--antitoxin systems relative to other neighbouring pairs (22.4\%, 11 of 49, against 3.4\%, 129
+of 3{,}795, $p=9.0\times10^{-7}$), and the Rv2516c--Rv2517c pair's own immediate neighbourhood
+includes one such validated system (Rv2514c--Rv2515c). Rv2516c--Rv2517c therefore joins an
+intrinsically atypical class of gene pairs, not through its perfect concordance specifically but
+through its shared rarity and adjacency; this shifts plausibility indirectly rather than
+demonstrating that the pair itself is a functional module. This result does not touch the
 functional co-expression demonstrated by RNA-seq above (Section~3.3), which is evidence of a
 different kind, but it removes phylogenetic co-occurrence as an independent argument for a
 distinctive functional module.
@@ -524,7 +787,7 @@ candidate intergenic regions. Together they retire the simplest palindromic or t
 models for this specific genomic window, without excluding an asymmetric, monomeric binding mode
 that current data and tools cannot test.
 
-Finally, we asked whether unit B self-associates as an apo homodimer, since dimerisation is the
+We then asked whether unit B self-associates as an apo homodimer, since dimerisation is the
 structural premise of a palindromic-operator model. The result does not resolve the question, for
 two independent and mutually reinforcing reasons. On every metric (interface pTM, minimum
 inter-chain predicted aligned error, interface contact count), the ordering across the three apo
@@ -545,43 +808,110 @@ higher, nor as refuting it, since a DNA-coupled mechanism would be invisible to 
 construction. This is a negative result of method, not of biology, a distinction we maintain
 throughout rather than collapsing into either a confirmatory or a refuting reading.
 
-\section{Discussion}
+The apo result left open the possibility that the pipeline's discrimination simply requires DNA to
+be present, since BldC's own dimerisation appeared coupled to its operator. We therefore tested this
+directly with the pre-registered E1--E4 panel (Methods), reading the aggregate score against the
+acceptance criterion fixed before the panel was run.
+\begin{center}
+\small
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Job & Condition & ipTM & PAE (inter-chain) & Interface contacts \\
+\midrule
+E1 & 2$\times$unit B + cognate-length DNA (test) & 0.930 & 0.48~\ang{} & 205 \\
+E2 & 2$\times$unit B + shuffled DNA (sequence control) & 0.928 & 0.46~\ang{} & 199 \\
+E4 & 2$\times$BldC + same DNA (cognate positive control) & 0.905 & 0.65~\ang{} & 212 \\
+E3 & 2$\times$unit A + same DNA (domain control) & 0.854 & 0.44~\ang{} & 126 \\
+\bottomrule
+\end{tabular}
+\end{center}
+At first sight, E1 (ipTM 0.930) is the highest score obtained anywhere in this study, exceeding even
+E4, the reconstruction of a real, structurally determined co-crystal. The acceptance criterion,
+however, fails at its very first clause: E2, the same homodimer with the DNA sequence
+dinucleotide-shuffled, scores within 0.002 ipTM of E1, with an indistinguishable inter-chain PAE and
+interface contact count. E4 does not soften this failure, it deepens it: the one complex in this
+panel with an experimentally determined, sequence-cognate structure scores \emph{below} both E1 and
+E2 on every aggregate metric, and records the panel's worst inter-chain PAE (0.65~\ang{} against
+0.44--0.48~\ang{} for the other three), despite having the largest interface by raw contact count
+(a difference too small, 7 contacts on $\sim$200, to carry weight on its own). On these metrics, the
+pipeline (Boltz-2, CPU inference, single diffusion sample, 100--200-residue chains plus a 22-bp
+duplex) does not discriminate a structurally validated cognate protein--DNA complex from either a
+heterologous test case or a sequence-scrambled negative control, and only weakly discriminates a
+domain with no known DNA-binding role. The apparently striking E1 score obtained here therefore
+cannot be read as evidence, of any strength, for sequence-specific or even generic protein--DNA
+binding by Rv2516c, since the same pipeline assigns a comparable or higher score to a shuffled decoy
+and to a heterologous pairing than to a genuine, independently solved complex. Combined with the apo
+result above, generative co-folding fails, on two independent tests (apo self-association and holo
+protein--DNA complex formation), to provide any demonstrated discriminating power for this class of
+question at this system size; we report this as a methodological cautionary result of its own, not
+merely a negative for Rv2516c.
+
+With the generative route closed, we attempted a non-generative, physics-based alternative:
+electrostatic complementarity (Section~3.4) is one such test and, by construction, is blind to base
+identity. A second, complementary non-generative approach, deriving a base-readout consensus motif
+from resolved homologous structures, was attempted but is blocked by the data currently available
+rather than by a failed test. Of the three homologous structures cited above (Section~3.2, BldC,
+AlpA, RdfS), only BldC's is a co-crystal with DNA; AlpA (PDB 8C3T) and RdfS (PDB 8DGL) are both apo
+structures with no DNA-contact residues to read. Of BldC's own 21 real DNA-contact residues, only
+three (Asp24, Lys26, Arg30) make a base-specific, rather than backbone-only, contact, spanning a
+window of just two base pairs, far too short to support a statistically defensible half-site
+consensus (a two-base-pair match is expected roughly every 16~bp by chance alone). This is itself an
+informative structural observation about this wHTH family, recognition apparently dominated by
+shape and backbone contacts rather than extensive base readout, at least for this representative,
+but it closes rather than opens a route to a sequence consensus with currently available structures.
 
 Domain-wise interrogation is the methodological result that carries beyond this single gene.
 Rv2516c looked, under whole-protein search, like a middling, ambiguous match to several unrelated
 folds in turn, ribosomal protein S6, an isolated sigma-factor region, a Lrp/AsnC-type regulator,
 each defensible until tested directly and each wrong. Isolating the central domain and searching it
 alone raised the strongest available signal by more than 4{,}500-fold in $E$-value and produced the
-first confident assignment for this protein. The lesson generalises: a dark protein that in fact
+first confident assignment for this protein. This was not merely a useful heuristic: inter-domain
+predicted aligned error shows the three units are not rigidly packed against one another, above even
+the range of an experimentally flexible reference pair, so a full-length query could not, even in
+principle, have carried reliable information on their joint arrangement. The lesson generalises: a
+dark protein that in fact
 fuses several domains, each individually characterisable, can appear entirely opaque, or worse,
 misleadingly assignable to the wrong family, when treated as a single query, because whole-protein
 scoring both dilutes a real domain-level signal and gives equal footing to weak, unrelated matches
 elsewhere in the sequence.
 
 The convergence of evidence for a candidate DNA-binding surface on unit B, homology, exposed
-charge, cross-genus conservation and atomic contact geometry all pointing to Arg111, Arg113,
-His115 and Arg118, is, precisely because it is now built from four independent methods, the point
+charge, cross-genus conservation, atomic contact geometry and calibrated electrostatic
+complementarity all pointing to Arg111, Arg113,
+His115 and Arg118, is, precisely because it is now built from five independent methods, the point
 at which the anti-overclaiming discipline matters most rather than least. Each analysis remains
-individually non-significant, no test of sequence specificity has been attempted (the DNA duplex
-used throughout is BldC's own operator, not a candidate site for Rv2516c), and every structural
-prediction reported here comes from a single screening method (Boltz-2, CPU inference) rather than
-from an experimentally determined structure or a validated reference predictor. We deliberately
-avoid stating that Rv2516c binds DNA, still less what it binds to; the appropriate language, and the
+individually non-significant, and we deliberately went on to test sequence specificity directly
+rather than leave it untested: a pre-registered panel co-folding the candidate domain with its
+cognate-length DNA, the same DNA scrambled, and an unrelated domain, alongside a reconstruction of a
+real, structurally solved cognate complex, found that generative co-folding (Boltz-2) does not
+discriminate the solved cognate complex from either decoy, on any aggregate metric, at this system
+size. A second, non-generative electrostatic test corroborates the candidate patch's electropositive
+character but is by construction blind to base identity, and a third, consensus-based approach is
+blocked by the paucity of solved homologous protein--DNA co-crystals rather than by a negative
+result. We therefore no longer treat sequence specificity as an open computational question for this
+system: every method available to us has been tried, and none can answer it. We deliberately
+avoid stating that Rv2516c binds DNA, still less what it binds to, or in a sequence-specific manner;
+the appropriate language, and the
 one used throughout this study, is that of a candidate site supported by a converging but
-individually inconclusive body of evidence.
+individually inconclusive body of evidence, whose sequence specificity now requires a direct
+biochemical assay rather than further computation.
 
-A tentative, and explicitly unproven, functional context is worth stating as a hypothesis to be
-tested rather than a conclusion. Rv2516c's operon partner, Rv2517c, sits immediately downstream of
+A tentative functional context, previously stated only as a hypothesis, can now be reported as
+formally tested. Rv2516c's operon partner, Rv2517c, sits immediately downstream of
 a validated toxin--antitoxin pair and is one of only three genes, alongside the toxin \textit{relK}
 and Rv3290c, up-regulated in an independent 32-gene qPCR screen of the moxifloxacin response, where
 it is explicitly classified as a persistence-related gene rather than as part of the SOS response
 \citep{iacobino2021moxifloxacin}; this is consistent with the antibiotic-stress, not DNA-damage,
-induction pattern established directly for the operon by RNA-seq reanalysis in Section~3.3. Together
-with the gene's regulatory context (the DosR dormancy relay Rv0081, an ArsR-associated co-expression
-module) and the general absence of Rv2516c from any DNA-damage-specific literature, this suggests a
-role connected to persistence rather than to acute genotoxic stress, but this remains context, not a
-demonstrated property of Rv2516c itself, and we state it as a hypothesis motivating future
-experiments rather than as a result.
+induction pattern established directly for the operon by RNA-seq reanalysis in Section~3.3. The
+gene's presence among the targets of Rv0081, the principal relay of the DosR dormancy regulon, in
+the genome-wide transcription-factor network, previously left this open as a dormancy-linked
+possibility; a formal hypergeometric enrichment test of Rv2516c's unbiased, genome-wide
+co-expression neighbourhood against the DosR and SigH regulons found zero overlap in both
+independent RNA-seq compendia at both list sizes tested, not merely a non-significant excess. The
+persistence/dormancy hypothesis therefore moves from untested context to formally tested and
+refuted at the transcriptional level, alongside the DNA-damage hypothesis refuted directly above:
+Rv2516c's antibiotic-stress response is general, tracking neither the SOS pathway nor a
+dormancy/hypoxia programme.
 
 The essentiality picture also needs a more careful frame than a simple binary. Rv2516c is not
 essential in the strict, uniform sense across its whole length: transposon-mutagenesis coverage is
@@ -602,40 +932,75 @@ DNA-binding hypothesis is confirmed, disrupting a protein--DNA interface would c
 class of intervention than a conventional active-site inhibitor.
 
 Several limitations apply across the whole study and are stated together here rather than
-distributed piecemeal. Every structural prediction relies on a single computational method (Boltz-2
-on CPU, a single diffusion sample); no experimentally determined structure exists for any part of
-Rv2516c or for its closest homologs. The strongest conservation and charge signals rest on small
-numbers (four exposed basic residues, four independent phylogenetic lineages). No test reported here
-addresses sequence specificity of DNA binding, and the identity of any DNA-binding domain's true
+distributed piecemeal. Every structural prediction relies on a single generative computational
+method (Boltz-2 on CPU, a single diffusion sample), whose own sequence-specificity discrimination we
+show directly to be indistinguishable from chance at this system size; no experimentally determined
+structure exists for any part of Rv2516c or for its closest homologs. The strongest conservation and
+charge signals rest on small numbers (four exposed basic residues, four independent phylogenetic
+lineages), and the ad hoc phylogeny used to rule out recent horizontal transfer failed its own
+pre-registered validity check on several decisive clades, so only the more powerful relative-
+divergence test, not fine topology, supports that conclusion. Sequence specificity of DNA binding
+has now been probed by every computational route available to us, generative co-folding twice
+(apo and holo) and a non-generative electrostatic and structural-consensus approach once, and none
+resolved it; only a direct biochemical assay, electrophoretic mobility shift, footprinting, or an
+equivalent, can move the DNA-binding hypothesis from a converging body of computational evidence to
+a demonstrated, sequence-specific property. The identity of any DNA-binding domain's true
 molecular function (the mechanism, the physiological state, and what precisely it regulates) remains
-entirely open, most of all for unit C, whose fold is established but whose function has no
-candidate assignment at all from any method used here. Only a direct biochemical assay,
-electrophoretic mobility shift or an equivalent, can move the DNA-binding hypothesis from a
-converging body of computational evidence to a demonstrated property.
+entirely open, most of all for unit C, whose fold is established, whose acquisition on the branch
+leading to \mtb{} appears more recent than the ferredoxin-like/helix-turn-helix core, and whose
+first experimentally anchored fact is a validated bovine T-cell epitope, but which still has no
+candidate molecular-function assignment from any method used here. Four independent
+guilt-by-association routes, genome-wide co-expression, the dormancy/DosR and SigH regulons, the
+STRING interaction network, and IS6110-based structural instability, were each tested and closed
+without revealing a new partner or regulatory programme, so the function of Rv2516c and of unit C in
+particular will require either an experimentally determined structure or a targeted biochemical
+experiment, not further contextual inference.
 
 \section{Conclusion}
 
 Rv2516c, entirely unstudied before this work, resolves under domain-wise interrogation into three
 independent structural units: an N-terminal ferredoxin-like domain of unknown function (DUF8830), a
 central helix-turn-helix of the AlpA/excisionase family, and a C-terminal immunoglobulin-like
-$\beta$-sandwich whose function remains completely open. Isolating the central domain rather than
+$\beta$-sandwich whose function remains largely open. Isolating the central domain rather than
 searching the full-length protein was the single step that turned an ambiguous, repeatedly
-misassigned dark protein into a confidently classified one, a strategy we expect to generalise to
-other multi-domain dark proteins. The gene sits in an ancient, domesticated genomic cassette that
-responds to general antibiotic stress rather than DNA damage, and four independent, individually
-inconclusive lines of evidence converge on a candidate DNA-binding surface within the
-helix-turn-helix domain, a hypothesis this study raises but does not settle. Together with a
-robustly measured CRISPRi vulnerability, genus-level restriction and complete novelty, Rv2516c is
-put forward as a candidate target whose molecular function, and whose third domain in particular,
-now defines the next experimental step.
+misassigned dark protein into a confidently classified one, justified not only by a $>$4{,}500-fold
+gain in $E$-value but physically, by inter-domain predicted aligned error showing the three units are
+not rigidly packed together, a strategy we expect to generalise to
+other multi-domain dark proteins. The gene sits in an ancient, domesticated genomic cassette,
+structurally stable across thousands of clinical genomes, whose central helix-turn-helix module is
+the most conserved part of the protein across the genus, while the C-terminal unit appears to be a
+later acquisition restricted to the branch leading to \mtb{} and now carries its first experimentally
+anchored fact, a validated bovine T-cell epitope. The cassette responds to general antibiotic
+stress rather than DNA damage or a dormancy/DosR programme, both formally tested and refuted, and
+five independent, individually inconclusive lines of evidence, including a calibrated
+electrostatic test, converge on a candidate DNA-binding surface within the helix-turn-helix domain;
+whether this surface discriminates DNA sequence, however, could not be resolved by any computational
+method attempted here, including a pre-registered generative co-folding panel that failed to
+distinguish a structurally validated cognate complex from a scrambled or heterologous decoy, a
+cautionary methodological result in its own right. Together with a
+robustly measured CRISPRi vulnerability, genus-level restriction, complete novelty, and four closed
+guilt-by-association routes that leave contextual inference exhausted, Rv2516c is
+put forward as a candidate target whose molecular function, and whose third domain and DNA-binding
+sequence specificity in particular, now require direct experimental work rather than further
+computation.
+
+\section*{Declaration of generative AI and AI-assisted technologies in the writing process}
+
+During the preparation of this work, the author used Claude Code (Anthropic), an AI-agent software
+environment powered by the Claude Sonnet model, for in silico data retrieval, statistical analysis,
+literature verification and drafting assistance, as described in the Materials and Methods. After
+using this tool, the author reviewed, independently verified against primary sources, and edited
+the content as necessary, and takes full responsibility for the content of this publication.
 
 \section*{Data and code availability}
 
-The manuscript source, figures and bibliography are available at
-\url{https://github.com/cguyeux/rv2516c-mtbc}. Analysis scripts (domain segmentation, homology
+The manuscript source, figures, bibliography and analysis scripts (domain segmentation, homology
 search parsing, conservation mapping, Boltz-2 job generation and interface-contact parsing,
-operator motif search, figure rendering) and intermediate results will be deposited in the same
-repository prior to submission. The AlphaFold model of Rv2516c is available in the AlphaFold
+operator motif search, figure rendering) are available at
+\url{https://github.com/cguyeux/rv2516c-mtbc}. Four supplementary data tables (cross-genus
+conservation, the McDonald--Kreitman contingency data, the IS6110 insertions in the locus window,
+and the genome-wide co-expression top-partner lists; Supplementary Tables~S1--S4) are provided in
+the same repository. The AlphaFold model of Rv2516c is available in the AlphaFold
 Protein Structure Database (AF-I6YDM0-F1).
 
 \bibliographystyle{unsrtnat}

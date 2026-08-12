@@ -60,36 +60,36 @@
 
 \begin{abstract}
 \noindent
-Une part substantielle du protéome de \mtb{} reste fonctionnellement non caractérisée, et
-rechercher une protéine dark pleine longueur qui combine plusieurs domaines indépendants peut
-diluer un signal d'homologie distante réel en dessous du seuil de détection. Nous résolvons ici
-Rv2516c, une protéine conservée hypothétique de 267 résidus jamais étudiée dans la littérature sur
-\mtb{}, en interrogeant séparément chacune de ses unités structurales. La segmentation par carte de
-contacts des modèles AlphaFold et ESMFold délimite trois unités~: un domaine N-terminal de type
-ferredoxine (résidus 1--87, Pfam DUF8830), une hélice-tour-hélice ailée centrale de la famille
-AlpA/excisionase (résidus 88--147), et un feuillet $\beta$ C-terminal de type immunoglobuline
-(résidus 178--267) de fonction non assignée. La recherche profil--profil (HHpred) sur la seule
-unité centrale identifie la famille AlpA/excisionase à $E=1,3\times10^{-10}$, un gain de plus de
-4\,500~fois en valeur $E$ par rapport à la même recherche sur la protéine entière, renversant deux
-hypothèses antérieures plus faibles portant sur la protéine entière (repli de type protéine
-ribosomale S6, région isolée de facteur sigma). Rv2516c est co-transcrite avec Rv2517c dans une
-cassette génomique ancienne et domestiquée, aux côtés d'une paire toxine--antitoxine validée~; la
-réanalyse de données RNA-seq la montre induite sous traitement antibiotique comme une réponse de
-stress générale, et non la réponse aux dommages de l'ADN (SOS) que son seul contexte génomique
-avait suggérée. Quatre lignes de preuve indépendantes, homologie, charge de surface exposée,
-conservation inter-genre, et géométrie de contact à résolution atomique dans un modèle de
-co-repliement protéine--ADN, convergent sur les mêmes résidus basiques (Arg111, Arg113, His115,
-Arg118) comme surface candidate de liaison à l'ADN, bien qu'aucune ne soit significative isolément,
-qu'aucun motif opérateur n'ait pu être trouvé à proximité, et qu'un test d'auto-association du
-domaine soit resté non informatif. Rv2516c n'est pas essentielle au sens strict de la mutagenèse
-par transposon, puisque le module hélice-tour-hélice ne porte aucun site d'insertion de
-transposon, mais elle est fortement vulnérable à l'interférence CRISPR (indice de vulnérabilité
-$-9,91$, dont la fiabilité a été confirmée indépendamment), restreinte au genre
-\textit{Mycobacterium} et à ses plus proches parents, et entièrement non étudiée. Nous proposons
-l'interrogation domaine par domaine comme stratégie générale pour les protéines dark
-multi-domaines, et avançons le module hélice-tour-hélice de Rv2516c comme élément candidat, bien
-que non prouvé, de liaison à l'ADN, intégré dans une cassette génomique dérivée d'un élément
-mobile.
+Une part substantielle du protéome de \mtb{} reste non caractérisée, et les
+protéines dark multi-domaines diluent le signal d'homologie distante en recherche pleine longueur.
+Nous résolvons Rv2516c, une protéine conservée hypothétique de 267 résidus, en interrogeant
+séparément ses unités structurales. La segmentation par
+carte de contacts des modèles AlphaFold et ESMFold délimite trois unités~: un domaine N-terminal de
+type ferredoxine (Pfam DUF8830), une hélice-tour-hélice ailée centrale de la famille
+AlpA/excisionase, et un feuillet $\beta$ C-terminal immunoglobuline de fonction non assignée. La
+recherche profil--profil (HHpred) sur la seule unité centrale identifie la famille AlpA/excisionase
+à $E=1,3\times10^{-10}$, un gain de 4\,500~fois par rapport à la protéine entière. La stratégie se
+justifie physiquement~: l'erreur alignée prédite inter-domaines montre que les trois unités
+ne sont pas empaquetées rigidement, excluant une inférence fiable en pleine longueur. Sur quatre
+lignées mycobactériennes non tuberculeuses indépendantes, l'unité hélice-tour-hélice est la région
+la plus conservée du génome, tandis que l'unité C-terminale est une acquisition plus récente
+restreinte à la branche de \mtb{}. Rv2516c est co-transcrite avec Rv2517c dans une cassette stable
+près d'une paire toxine--antitoxine validée, induite sous traitement antibiotique par stress
+général plutôt que par dommage à l'ADN (SOS), et écarte le régulon de dormance
+DosR. Cinq lignes de preuve indépendantes convergent sur
+les mêmes résidus basiques (Arg111, Arg113, His115, Arg118) comme surface candidate de liaison à
+l'ADN, bien qu'aucune ne soit significative isolément, sans motif opérateur à proximité. La
+spécificité de séquence de cette liaison reste non tranchée par le calcul~: le
+co-repliement génératif protéine--ADN ne discrimine pas le complexe cognat des leurres. Un second
+test, non génératif, électrostatique, corrobore le caractère électropositif de la surface
+candidate, quoique trois fois plus faible qu'un témoin positif, mais est par construction aveugle
+à l'identité des bases. Rv2516c est essentielle par mutagenèse par transposon, mais restreinte au domaine
+(aucun site testable dans le module hélice-tour-hélice), indépendamment fortement
+vulnérable à l'interférence CRISPR (indice de vulnérabilité $-9,91$), restreinte au genre
+\textit{Mycobacterium}, et entièrement non étudiée. Nous proposons l'interrogation domaine par
+domaine comme stratégie pour les protéines dark multi-domaines et avançons le module
+hélice-tour-hélice comme élément candidat, bien que non prouvé, de liaison à l'ADN dans
+une cassette dérivée d'un élément mobile.
 \end{abstract}
 
 \textbf{Mots-cl\'es~:} \textit{Mycobacterium tuberculosis}, protéome dark, Rv2516c, AlpA/excisionase,
@@ -155,9 +155,18 @@ structures AlphaFold/Swiss-Prot et PDB (build Foldseek 427df8a~; base structural
 le 2025-07-25) par Foldseek \citep{vankempen2024foldseek}, et contre la bibliothèque de profils
 Pfam-A distribuée par InterPro \citep{paysanlafosse2023interpro} par \texttt{hmmscan}, au seuil de
 gathering (calculé le 2026-06-01) et, pour les correspondances sous ce seuil, en dessous (calculé
-le 2026-07-31). L'assignation de famille exigeait une convergence entre au moins deux de ces trois
-méthodes~; une correspondance isolée d'une seule méthode a été traitée comme suggestive, jamais
-comme une assignation.
+le 2026-07-31). Les correspondances Foldseek ont été classées significatives à $E<10^{-3}$,
+suggestives à $E\sim10^{-2}$, et au niveau du bruit au-delà de $E=1$. L'assignation de famille
+exigeait une convergence entre au moins deux de ces trois méthodes~; une correspondance isolée
+d'une seule méthode a été traitée comme suggestive, jamais comme une assignation.
+
+\paragraph{Flexibilité inter-domaines.} Pour tester directement si les trois unités structurales
+sont empaquetées rigidement les unes contre les autres, et donc si une recherche structurale pleine
+longueur aurait pu en principe porter une information fiable sur l'agencement des domaines, la
+matrice d'erreur alignée prédite (PAE) du modèle AlphaFold DB v6 a été résumée par paire entre
+unités et étalonnée contre quatre protéines de référence traitées par le même pipeline~: deux à
+l'agencement inter-domaines rigide établi expérimentalement (KatG de \mtb{}, ATCase d'\textit{E.\
+coli}) et deux à la flexibilité inter-domaines établie (calmoduline, LacI).
 
 \paragraph{Essentialité, vulnérabilité et conservation de population.} Les comptes d'insertion de
 transposon par site dinucléotidique TA et l'appel d'essentialité ont été pris dans le jeu de
@@ -168,7 +177,11 @@ intervalle de confiance ont été pris chez \citet{bosch2021vulnerability}~; sa 
 évaluée indépendamment contre une ressource cataloguant, à l'échelle du génome, le nombre de guides
 et la force du guide individuel le plus fort sous-tendant l'estimation de vulnérabilité de chaque
 gène, contre la distribution de ces deux quantités sur l'ensemble des gènes classés druggables
-($\text{VI}\leq-6,0$, $n=500$). La variation intra-complexe a été tirée d'une base de données locale
+($\text{VI}\leq-6,0$, $n=500$). Un test de McDonald--Kreitman a opposé le polymorphisme intra-MTBC à
+la divergence vis-à-vis de l'extragroupe \textit{M.\ canettii}~; le compte de divergence étant petit
+(cinq substitutions), la puissance statistique de chaque issue possible a été énumérée avant de lire
+la valeur observée, plutôt que rapportée seulement pour la valeur effectivement obtenue. La
+variation intra-complexe a été tirée d'une base de données locale
 de 145\,209 génomes MTBC (format SPDI, référencés sur H37Rv)~; la conservation inter-genre a
 utilisé \texttt{tblastn} (BLAST+ 2.15.0) contre les génomes de six mycobactéries non tuberculeuses
 connues pour porter un orthologue de Rv2516c, relancé avec des alignements pairés complets (pas
@@ -177,17 +190,49 @@ sur la protéine entière, puisse être calculée~; trois des six génomes (\tex
 \textit{M.\ bouchedurhonense}, \textit{M.\ timonense}) se sont révélés partager un profil
 d'identité par position identique, cohérent avec leur appartenance au complexe \textit{M.\ avium},
 et ont été traités comme une seule observation phylogénétiquement indépendante afin d'éviter la
-pseudo-réplication, laissant quatre lignées indépendantes.
+pseudo-réplication, laissant quatre lignées indépendantes. Pour distinguer un transfert horizontal
+récent d'un héritage vertical ancien avec pertes propres à certaines lignées, ces mêmes quatre
+lignées ont été comparées pour leur divergence à Rv2516c relativement à leur propre divergence sur
+douze protéines de ménage concaténées, et le statut de porteur a été testé pour un regroupement
+phylogénétique (parcimonie de Fitch sur un arbre ad hoc de gènes de ménage, 200 réplicats bootstrap,
+modèle nul par permutation), la résolution de l'arbre étant elle-même validée indépendamment sur des
+clades de parenté connue avant toute revendication topologique. Les mêmes alignements ont aussi été
+lus pour la couverture par unité, afin de demander si la présence de l'unité C-terminale se
+restreint à un sous-ensemble des lignées porteuses, et la région codante de chaque orthologue a été
+vérifiée pour un codon stop en phase immédiatement après la région s'alignant sur les unités A et B,
+contre la distance génomique à la fin de contig la plus proche et contre tous les segments BLAST à
+score élevé à un seuil relâché, pour distinguer une absence biologique réelle de l'unité C d'un
+artefact d'assemblage.
 
 \paragraph{Contexte génomique, synténie et réseau régulateur.} La fenêtre de six gènes flanquant
 Rv2516c (Rv2512c--Rv2518c) a été caractérisée pour des signatures de transfert horizontal (sites
 d'attachement flanquants, gènes d'ARNt, contenu en GC calibré contre la distribution au niveau
 gène à l'échelle du génome) et pour la co-expression avec son voisin immédiat Rv2517c et avec la
 paire toxine--antitoxine validée Rv2514c--Rv2515c \citep{tandon2019ta}, en utilisant deux
-compendiums d'expression publiés indépendants. Les associations régulatrices ont été prises dans le
+compendiums d'expression publiés indépendants. Au-delà de cette comparaison ciblée, un balayage de
+co-expression non biaisé, à l'échelle du génome, a corrélé l'expression de Rv2516c à celle de tous
+les autres gènes (3\,911 gènes) dans chaque compendium séparément, classant les partenaires par
+corrélation et testant la concordance de rang entre les deux compendiums indépendants contre un
+modèle nul de classement aléatoire. Les listes de gènes les mieux classés qui en résultent (top-50
+et top-100 dans chaque compendium) ont été testées pour un enrichissement, par test hypergéométrique
+unilatéral avec correction de Benjamini--Hochberg sur l'ensemble des comparaisons, contre quatre
+régulons curés~: le régulon classique de dormance DosR \citep{rustad2008dosr}, les régulons SigH et
+SigF issus du réseau de surexpression de facteurs de transcription à l'échelle du génome
+\citep{minch2015network,rustad2014tfoe}, et l'union des régulons des cinq régulateurs déjà connus de
+Rv2516c elle-même. La stabilité structurale de la région codante et intergénique
+Rv2516c--Rv2517c a été évaluée en projetant les sites d'insertion IS6110 appelés contre un système
+de position non-référence sur 5\,169 génomes MTBC couvrant 614 clades phylogénétiques, et en
+confrontant la fenêtre au catalogue des régions de différence canoniques. Les associations
+régulatrices ont été prises dans le
 réseau de liaison des facteurs de transcription de \mtb{} à l'échelle du génome
-\citep{minch2015network} et dans les données d'association protéique récupérées via STRING v12.0
-\citep{szklarczyk2023string}.
+\citep{minch2015network} et dans les données d'association protéique récupérées via le graphe
+d'interaction STRING v12.0 complet (693\,013 arêtes, pas la liste tronquée des 15 meilleurs
+partenaires des fiches individuelles) \citep{szklarczyk2023string}, dont le degré et la taille du
+second voisinage de Rv2516c ont été comparés à un modèle nul de gènes appariés sur le seul degré,
+séparément pour le graphe d'évidence complet et pour un graphe restreint aux canaux d'évidence non
+positionnels (excluant voisinage génomique, fusion de gènes et co-occurrence phylogénétique), et le
+protéome entier de H37Rv a été balayé pour tout autre locus portant le même clan Pfam
+hélice-tour-hélice sans relation de paralogie déjà connue avec Rv2516c.
 
 \paragraph{Réponse transcriptionnelle sous stress antibiotique.} Des données RNA-seq déposées
 publiquement, couvrant \mtb{} exposée à la moxifloxacine et, séparément, à neuf antibiotiques de
@@ -204,7 +249,28 @@ Shrake--Rupley \citep{shrake1973sasa}, normalisée par l'accessibilité au solva
 de chaque type de résidu \citep{tien2013maxasa}. La fraction de résidus basiques exposés a été
 comparée entre l'hélice de reconnaissance candidate (résidus 111--121), l'hélice adjacente, l'unité
 hélice-tour-hélice entière, l'unité de type ferredoxine (témoin de spécificité), et la protéine
-entière.
+entière. La même procédure a été appliquée au seul épitope de l'unité C soutenu
+expérimentalement (résidus 227--246, voir plus bas), comparé à la distribution de RSA de l'unité C
+entière, pour demander s'il se situe sur une boucle exposée ou un brin enfoui.
+
+\paragraph{Recherche d'épitopes T.} Tous les enregistrements de tests lymphocytaires T pour
+l'accession UniProt de Rv2516c (I6YDM0) ont été récupérés depuis l'Immune Epitope Database
+\citep{vita2019iedb}. Les positions IEDB se référant à l'antigène source curé plutôt qu'à H37Rv,
+chaque peptide a été relocalisé sur la séquence H37Rv par correspondance exacte de chaîne plutôt que
+pris tel quel à sa coordonnée rapportée~; un peptide absent de H37Rv a été exclu.
+
+\paragraph{Complémentarité électrostatique.} Comme alternative non générative, non fondée sur
+l'apprentissage automatique, au co-repliement protéine--ADN, le potentiel électrostatique de chaque
+protéine seule (aucun ADN présent) a été calculé avec PDB2PQR 3.7.1 et APBS 3.4.1 (équation de
+Poisson--Boltzmann linéarisée) \citep{jurrus2018apbs} et échantillonné à une distance de sonde de
+3,4~\ang{} de la surface accessible au solvant, approximant la position d'un oxygène de phosphate.
+Le patch candidat (Arg111, Arg113, His115, Arg118) a été classé contre une distribution par fenêtre
+glissante de patchs de résidus exposés sur la même protéine, et calibré contre les résidus de
+contact ADN de BldC déterminés expérimentalement (extraits du PDB 6AMA par distance interatomique
+directe) traités par le même pipeline. La même structure co-cristallisée a été utilisée pour
+classer chaque contact BldC--ADN comme spécifique de base ou uniquement de squelette, afin d'évaluer
+si un consensus de lecture de base pouvait en principe être dérivé des structures homologues
+actuellement disponibles (BldC, et les structures apo d'AlpA, PDB 8C3T, et de RdfS, PDB 8DGL).
 
 \paragraph{Co-repliement Boltz-2, témoin mutant et analyse des contacts d'interface.} Boltz-2,
 version 2.2.1, \citep{wohlwend2025boltz2} a été exécuté localement (inférence CPU) pour prédire des
@@ -220,7 +286,17 @@ résidus, non les identifiants internes) pour les prédictions sauvage et mutant
 réponse géométrique du modèle à la mutation puisse être évaluée indépendamment du score agrégé.
 L'auto-association de l'unité hélice-tour-hélice a été testée de la même façon, en homodimère apo,
 contre un témoin négatif de spécificité (l'unité de type ferredoxine) et un témoin positif (BldC
-apo), les trois sous des réglages identiques (CPU, échantillon de diffusion unique).
+apo), les trois sous des réglages identiques (CPU, échantillon de diffusion unique). Pour tester
+directement si le pipeline de co-repliement peut discriminer un complexe protéine--ADN cognat en
+séquence d'un complexe hétérologue ou brouillé, un second panel, pré-enregistré, a co-replié un
+homodimère de l'unité hélice-tour-hélice avec le même duplex de 22~pb (E1, test), le même homodimère
+avec le même duplex après brouillage préservant le contenu dinucléotidique (E2, témoin négatif de
+séquence, algorithme de brouillage d'Altschul--Erickson), un homodimère de l'unité de type
+ferredoxine avec le duplex intact (E3, témoin négatif de domaine), et un homodimère de BldC avec le
+duplex intact, reconstituant directement le co-cristal PDB 6AMA (E4, témoin positif cognat). Le
+critère d'acceptation, fixé avant que le panel ne soit lancé, exigeait qu'E1 dépasse à la fois E2 et
+E3 avec une marge nette, E4 étant lu comme le plafond atteignable pour un complexe authentiquement
+cognat dans ce pipeline.
 
 \paragraph{Recherche de motif opérateur.} Les quatre régions intergéniques flanquant la fenêtre
 Rv2512c--Rv2518c ont été balayées à la recherche du meilleur score de répétition inversée puis,
@@ -240,7 +316,21 @@ gènes voisins à l'échelle du génome appariées en plus sur la rareté.
 
 \paragraph{Détection de poches et druggabilité.} Le modèle AlphaFold apo a été évalué pour la
 druggabilité de ses poches avec fpocket 4.2.3, calibré contre une population appariée de 150
-structures d'enzymes prouvées et 150 protéines non catalytiques traitées par le même pipeline.
+enzymes prouvées (numéro EC attribué par UniProt ou eggNOG, non dark) et 150 protéines non
+catalytiques (fonction annotée « regulatory protein » ou « information pathway », sans numéro EC),
+toutes deux échantillonnées aléatoirement (graine fixe) dans l'atlas couvrant l'ensemble du
+protéome H37Rv et restreintes tout du long à des modèles de qualité comparable (pLDDT moyen
+$\geq$ 70) pour que la détectabilité des poches ne soit pas confondue avec la qualité du modèle.
+
+Les analyses bioinformatiques, les interrogations de bases de données et le recoupement
+bibliographique sous-jacents à cette étude ont été réalisés au sein d'un environnement de travail
+bioinformatique augmenté par l'IA, Claude Code (Anthropic), faisant fonctionner le modèle de
+langage Claude Sonnet comme agent d'analyse interactif sous direction humaine continue. Chaque
+script, test statistique et affirmation numérique produits dans cet environnement a été retracé
+indépendamment jusqu'à sa donnée brute, sa publication primaire ou son enregistrement de base de
+données sous-jacents avant d'être rapporté ici, suivant la discipline de vérification décrite tout
+au long de cette section~; l'auteur correspondant a conçu l'étude, spécifié et révisé chaque
+analyse, et assume l'entière responsabilité de l'exactitude de son contenu.
 
 \section{Résultats}
 
@@ -255,7 +345,16 @@ proches parents (6 des 53 mycobactéries non tuberculeuses échantillonnées, 1 
 complexe associé à \mtb{} hors du genre). Un balayage exhaustif de la littérature sur environ
 330\,000 résumés tuberculose, utilisant chaque alias connu du locus, ne trouve pas une seule
 publication qui traite Rv2516c comme sujet~; les sept publications où le locus tag apparaît ne le
-citent qu'à l'intérieur de listes de gènes supplémentaires.
+citent qu'à l'intérieur de listes de gènes supplémentaires. Un test de McDonald--Kreitman contre
+\textit{M.\ canettii} comme extragroupe (deux différences fixées non-synonymes et trois synonymes,
+sept polymorphismes non-synonymes et deux synonymes~; Tableau supplémentaire~S2) n'est significatif sous aucun des deux seuils
+de polymorphisme testés ($p=0,100$ et $p=0,266$), mais la puissance propre du test est asymétrique~:
+avec seulement cinq différences fixées disponibles, deux des six comptes de divergence non-synonyme
+possibles auraient atteint la significativité ($p=0,001$ et $p=0,015$ pour zéro ou une différence
+fixée non-synonyme), si bien que le test avait la puissance de détecter une sélection purificatrice
+forte sur la divergence et ne l'a pas trouvée, tandis qu'il ne peut rien dire d'une sélection
+positive. Le compte observé se situe juste au-delà du dernier seuil détectable, un résultat assez
+fragile pour qu'une substitution non-synonyme de moins l'aurait rendu significatif.
 
 Le gène est essentiel, mais pas uniformément sur toute sa longueur. Sur les quatorze sites
 dinucléotidiques TA disponibles à la mutagenèse par transposon Himar1 dans Rv2516c, cinq sont
@@ -288,7 +387,7 @@ renverse deux hypothèses antérieures portant sur la protéine entière}
 La segmentation par carte de contacts des modèles AlphaFold et ESMFold converge indépendamment vers
 la même architecture à trois unités~: une unité N-terminale A (résidus 1--87), une unité centrale B
 (résidus 88--147), un court lien (résidus 148--177), et une unité C-terminale C (résidus 178--267)
-(\Cref{fig:architecture}a).
+(\Cref{fig-architecture}a).
 
 \begin{figure}[htbp]
 \centering
@@ -298,21 +397,33 @@ la même architecture à trois unités~: une unité N-terminale A (résidus 1--8
 domaine N-terminal de type ferredoxine (unité A, DUF8830), une hélice-tour-hélice ailée centrale de
 la famille AlpA/excisionase (unité B), un court lien, et un feuillet $\beta$ C-terminal de type
 immunoglobuline (unité C) de fonction non assignée. La fenêtre candidate de liaison à l'ADN
-(111--121, \Cref{fig:convergence}) se situe au sein de l'unité B. \textbf{(b)} La recherche
+(111--121, \Cref{fig-convergence}) se situe au sein de l'unité B. \textbf{(b)} La recherche
 profil--profil (HHpred) sur la seule unité B élève la valeur $E$ de l'assignation
 AlpA/excisionase de plus de 4\,500~fois par rapport à la même recherche sur la protéine entière,
 renversant deux hypothèses antérieures plus faibles portant sur la protéine entière (repli de type
 S6 ribosomal, région isolée de facteur sigma).}
-\label{fig:architecture}
+\label{fig-architecture}
 \end{figure}
 
 Deux hypothèses portant sur la protéine entière ont précédé cette segmentation et ont chacune été
 abandonnées une fois testées directement. La première a lu la meilleure correspondance Foldseek
 unique contre la Protein Data Bank complète, des permutants circulaires de la protéine ribosomale
-S6, comme une assignation de repli~; une comparaison TM-align ciblée contre trois jeux de référence
-nommés (permutants S6 ribosomaux, région 4 de facteur sigma, régulateurs de liaison à l'ADN de la
-famille MerR) a montré ensuite que cette correspondance n'était que la plus forte d'un plancher de
-bruit inter-classes (score TM de 0,33--0,47 sur les trois familles), pas un signal discriminant. La
+S6, comme une assignation de repli~; une comparaison TM-align ciblée du modèle entier (267 résidus)
+contre trois jeux de référence nommés (permutants S6 ribosomaux, région 4 de facteur sigma,
+régulateurs de liaison à l'ADN de la famille MerR), l'étendue de l'alignement sur la requête étant
+laissée comme une sortie de la recherche plutôt que fixée en entrée, a rendu des scores médians
+(plage) de 0,658 (0,645--0,673) contre S6, 0,430 (0,368--0,453) contre la région 4 de facteur sigma,
+et 0,346 contre MerR. Seuls les alignements S6 sont systématiquement tombés dans le segment
+N-terminal (résidus 2--83) qu'occupe l'unité A~; les alignements région-4-de-facteur-sigma et MerR
+sont tombés majoritairement, mais pas exclusivement, près des résidus 94--152, plus proches de
+l'unité B. Les deux dernières classes se situent au plancher de bruit
+inter-classes fixé par les moyennes par paire des trois familles elles-mêmes (0,32--0,47), mais pas
+S6~: c'est un vrai signal structural, nettement au-dessus de ce plancher. Il a néanmoins été
+abandonné comme assignation de repli, non pas parce qu'il s'agissait de bruit, mais parce qu'il
+était non spécifique et supplanté, le même repli de type ferredoxine se retrouvant dans plusieurs
+familles non apparentées (S6 parmi elles) sans qu'aucune ne se distingue des autres, et l'unité A a
+finalement été assignée à DUF8830 (domaine de fonction inconnue, \Cref{fig-architecture}), une
+attribution Pfam spécifique à cette séquence plutôt qu'un repli partagé largement entre familles. La
 seconde hypothèse reposait sur l'unique domaine Pfam montré dans un rapport-résumé (région 4 de
 facteur sigma, Sigma70\_r4, résidus 98--121, $E=8,4\times10^{-4}$ indépendante, sous le seuil de
 gathering de Pfam)~; la sortie complète de \texttt{hmmscan} contenait en fait douze correspondances
@@ -327,14 +438,34 @@ En tirant les leçons de ce motif, à savoir que chaque signal apparent provenai
 requête entière de 267 résidus diluant ce qu'un domaine isolé portait, l'unité B a été soumise à
 HHpred seule. Le résultat est la découverte la plus confiante de cette étude~: probabilité
 99,28~\%, $E=1,3\times10^{-10}$, assignant l'unité B à la famille AlpA/excisionase/facteur de
-directionnalité de recombinaison, contre une probabilité de 98,64~\%, $E=5,9\times10^{-7}$ pour la
+directionnalité de recombinaison (RDF), contre une probabilité de 98,64~\%, $E=5,9\times10^{-7}$ pour la
 même recherche sur la protéine entière, un gain de plus de 4\,500~fois en valeur $E$ du simple fait
 d'isoler le domaine. Ni l'hypothèse S6 ribosomale, ni celle de la région 4 de facteur sigma, ni
-celle Lrp/AsnC ne survivent à ce résultat. Une réserve s'applique~: \texttt{hmmscan} ne retrouve
+celle Lrp/AsnC ne survivent à ce résultat. Une activité de facteur de directionnalité de
+recombinaison de ce type général n'est pas ici une simple inférence trans-espèces~: l'excisionase du
+mycobactériophage L5, elle-même classée RDF, a été montrée fonctionnelle directement chez \mtb{},
+excisant un plasmide intégré du chromosome \citep{parish2001excisionase}, un précédent fonctionnel
+propre à l'organisme plutôt qu'une revendication d'homologie avec le domaine de la famille AlpA de
+l'unité B en particulier. Une réserve s'applique~: \texttt{hmmscan} ne retrouve
 jamais le profil AlpA à aucun seuil, sur aucune unité, alors même que HHpred interroge la même
 bibliothèque Pfam-A sous-jacente et retourne le profil correspondant (PF11112) à 99,16~\% de
 probabilité sur l'unité B~; les profils sont atteignables en principe, et l'écart reflète le régime
 de sensibilité séquence-contre-profil plutôt qu'une réfutation de l'assignation.
+
+L'interrogation domaine par domaine ne se justifie pas seulement par ce gain empirique, mais par
+l'agencement physique des trois unités dans le modèle lui-même. L'erreur alignée prédite
+inter-domaines, étalonnée contre deux protéines à l'agencement inter-domaines rigide établi
+expérimentalement (KatG de \mtb{}, ATCase d'\textit{E.\ coli}, 3--4~\ang{}) et deux à la flexibilité
+inter-domaines établie (calmoduline, LacI, 10--22~\ang{}, une plage sans recouvrement), place les
+trois paires inter-unités propres à Rv2516c au-dessus même de la référence la plus flexible~: A--B
+18~\ang{}, B--C 27~\ang{}, A--C 29~\ang{} (proche du plafond propre du modèle, 31,75~\ang{}, donc
+cette dernière valeur est probablement en partie saturée). Une mesure indépendante concorde~: le
+lien 148--177 a une confiance médiane par résidu (pLDDT) de 32, avec 97~\% de ses résidus sous 70,
+contre 85--94~\% pour les unités A, B et C elles-mêmes, la signature d'un désordre structural franc.
+Les trois unités de Rv2516c ne sont donc pas empaquetées rigidement les unes contre les autres~;
+une recherche structurale ou par profil sur la protéine entière ne porte aucune information fiable
+sur leur agencement relatif, si bien qu'interroger chaque unité séparément n'était pas une simple
+heuristique utile mais la seule façon structuralement correcte d'interroger cette protéine.
 
 L'unité A porte indépendamment un second domaine nommé, DUF8830 (domaine de fonction inconnue
 8830, Pfam PF31169, probabilité 98,16~\%, $E=1,2\times10^{-4}$, 81 des 87 colonnes alignées), une
@@ -345,12 +476,17 @@ famille (99,9~\%), et la famille contenant AlpA (qui inclut aussi DUF1233, Pyoci
 membres de type Tn916-Xis) chez 10\,141 des 10\,168 (99,7~\%). Rv2516c fusionne donc deux domaines
 qui constituent chacun, dans pratiquement tout autre génome, une protéine complète à eux seuls~;
 aucun des 25 partenaires de fusion connus de la famille AlpA ne la combine à un domaine de type
-ferredoxine ou immunoglobuline. L'assignation de repli de l'unité C et son assignation
+ferredoxine ou immunoglobuline. La seule architecture non-solo connue de DUF8830, un locus unique de
+\textit{Streptomyces haneummycinicus} fusionné à un domaine aldéhyde déshydrogénase, est annotée par
+homologie comme une enzyme canonique de biosynthèse de la proline (gamma-glutamyl phosphate
+réductase, EC 1.2.1.41) sans aucun rapport avec AlpA, la liaison à l'ADN ou les éléments mobiles,
+confirmant par le nom, et pas seulement par un pourcentage, que la fusion DUF8830/AlpA/type
+immunoglobuline de Rv2516c reste sans précédent annoté. L'assignation de repli de l'unité C et son assignation
 fonctionnelle reposent sur des preuves différentes et aboutissent à des conclusions différentes, et
 les deux ne doivent pas être lues comme également incertaines. Le \emph{repli} en feuillet $\beta$
 de type immunoglobuline est soutenu par un consensus entre les deux méthodes~: indépendamment chez
 Foldseek et chez HHpred, et au sein de HHpred par convergence entre plusieurs familles Pfam
-d'immunoglobulines non apparentées, la classe SCOP « tout-bêta », et, notablement, quatre feuillets
+d'immunoglobulines non apparentées, la classe SCOP « tout-bêta », et quatre feuillets
 $\beta$ synthétiques conçus \emph{de novo} sans aucune histoire évolutive~; des échafaudages
 synthétiques idéalisés de ce type figurent parmi les meilleures correspondances précisément parce
 qu'ils s'accordent sur la seule topologie nue, ce qui est diagnostique d'une assignation authentique
@@ -380,9 +516,40 @@ portent déjà le nom « excisionase » dans l'annotation actuelle sans le domai
 (seulement une correspondance générique HTH\_17), une collision de nommage qu'il vaut la peine de
 signaler pour quiconque cherche dans le génome par nom plutôt que par contenu de domaine. Une
 recherche Foldseek de chaque unité séparément contre la base AlphaFold/Swiss-Prot n'a rendu aucune
-correspondance significative ni suggestive (meilleure $E=1,7\times10^{-2}$, unité A), n'ajoutant
-aucune assignation au-delà de ce que les recherches Protein Data Bank et HHpred ci-dessus avaient
+correspondance significative, et au plus une seule correspondance suggestive à la limite (meilleure
+$E=1,7\times10^{-2}$, unité A), n'ajoutant aucune assignation au-delà de ce que les recherches Protein Data Bank et HHpred ci-dessus avaient
 déjà établi.
+
+Une analyse inter-genre des quatre lignées mycobactériennes non tuberculeuses phylogénétiquement
+indépendantes portant un orthologue (Méthodes~; Tableau supplémentaire~S1) affine ce tableau selon deux axes indépendants.
+Premièrement, l'unité hélice-tour-hélice est la partie la plus conservée de la protéine à l'échelle
+du genre~: couverture pleine longueur et identité de 76,7--93,3~\% dans les quatre lignées, contre
+37,5--70,1~\% pour l'unité de type ferredoxine et seulement 0--13~\% de couverture pour l'unité C
+hors du complexe associé à \mtb{}, un signal obtenu indépendamment de la prédiction structurale
+(HHpred) qui avait identifié le domaine en premier lieu. Une phylogénie ad hoc de gènes de ménage
+des six génomes porteurs échoue à son propre contrôle de validité pré-enregistré (support bootstrap
+de 0~\% sur plusieurs clades décisifs) et ne peut soutenir aucune revendication topologique fine~;
+le test disponible le plus puissant, la divergence relative de séquence, écarte cependant le
+transfert horizontal récent~: les propres protéines de ménage de chaque porteur sont identiques à
+92,8--95,1~\% à H37Rv, tandis que son orthologue de Rv2516c n'est identique qu'à 55,4--74,2~\%, soit
+21 à 38~points plus divergent, dans l'ordre prédit par une descendance verticale (le plus proche
+parent, \textit{M.\ shinjukuense}, porte à la fois les gènes de ménage les moins divergents et
+l'orthologue le moins divergent). Deuxièmement, l'unité C-terminale de type immunoglobuline semble
+être une acquisition plus récente que le noyau ferredoxine/hélice-tour-hélice. Dans deux de ces
+quatre lignées indépendantes (le complexe \textit{M.\ avium} et \textit{M.\ celatum}), la séquence
+codante de l'orthologue se termine par un codon stop en phase pratiquement immédiat (un à trois
+codons) après la région s'alignant sur les unités A et B, bien avant toute frontière de contig et
+sans aucun fragment d'alignement secondaire récupérable où que ce soit près de l'unité C même à un
+seuil relâché, plaidant pour une véritable troncature plutôt qu'un artefact d'assemblage~; le
+cinquième porteur, pleine longueur, du complexe associé à \textit{M.\ tuberculosis}
+(\textit{M.\ shinjukuense}) couvre les 267~résidus. Une sixième lignée, \textit{M.\ simiae}, reste
+non résolue par ce test (aucun codon stop dans les 66~codons suivant l'alignement, un cadre de
+lecture ouvert se poursuivant sur environ 195~pb supplémentaires d'origine incertaine). Pris
+ensemble, ces deux résultats sont cohérents avec une domestication en deux temps~: une fusion
+ancestrale ferredoxine/hélice-tour-hélice, déjà complète chez des mycobactéries non tuberculeuses
+éloignées, sous la contrainte de séquence la plus forte de toute la protéine, rejointe plus tard par
+l'unité de type immunoglobuline spécifiquement sur la branche menant vers le complexe associé à
+\mtb{} et le MTBC.
 
 \subsection{La cassette Rv2516c--Rv2517c est une unité génomique ancienne, domestiquée, qui répond
 à un stress antibiotique général et non à des dommages à l'ADN}
@@ -432,33 +599,67 @@ part de la voie SOS que sa proximité génomique avec un locus toxine--antitoxin
 suggérer. Cohérent avec une relation fonctionnelle, et non simplement adjacente, Rv2516c et Rv2517c
 sont co-exprimées à travers les conditions ($r=+0,409$, 99e percentile de toutes les paires de
 gènes), dépassant le plafond de co-expression fixé par la paire toxine--antitoxine validée
-elle-même ($r=+0,360$). L'appariement est néanmoins asymétrique~: Rv2517c n'est pas essentielle et
+elle-même ($r=+0,360$). Un balayage de co-expression non biaisé, à l'échelle du génome, contre les
+3\,911 autres gènes, plutôt que ce petit ensemble de candidats choisis a priori, confirme et affine
+ce résultat~: Rv2517c est le partenaire de rang~1 de Rv2516c dans les \emph{deux} compendiums
+indépendants séparément ($\rho=+0,929$ et $+0,507$~; la probabilité que ce double rang~1 survienne
+sous classement aléatoire est $p\approx6,5\times10^{-8}$), et les listes des 100~meilleurs
+partenaires se recouvrent entre compendiums bien au-delà du hasard (15~gènes partagés contre 2,6
+attendus, $p=1,9\times10^{-8}$~; Tableau supplémentaire~S4). Les gènes SOS canoniques \textit{recA}, \textit{dnaE2},
+\textit{ruvABC} et \textit{recB} ne sont jamais classés près du sommet et sont ordonnés de façon
+incohérente entre compendiums, tandis que les loci toxine--antitoxine (Rv1989c, Rv1990c, MazF6,
+ParE2) sont classés haut et stables de façon constante, renforçant la lecture stress
+antibiotique-et-non-dommage-à-l'ADN ci-dessus~; aucun nouveau partenaire n'est révélé par ce
+balayage non biaisé, si bien que la fonction de Rv2516c ne sera pas résolue par ses seuls corrélats
+transcriptionnels. L'appariement est néanmoins asymétrique~: Rv2517c n'est pas essentielle et
 son propre indice de vulnérabilité, $+0,54$ (IC 95~\% $-1,88$ à $+4,58$), traverse zéro,
-argumentant contre un hétérodimère obligatoire entre les deux protéines. Cohérent avec cette
-asymétrie, STRING ne liste que trois partenaires protéiques pour Rv2516c (Rv2517c, Rv2515c,
-Rv2514c), chacun soutenu uniquement par le canal de voisinage génomique (aucune preuve
-expérimentale, de base de données ou de fouille de texte), et chacun lui-même annoté comme
-hypothétique~; STRING ne contribue donc aucune hypothèse fonctionnelle indépendante ici. Dans le
-réseau de facteurs de transcription à l'échelle du génome \citep{minch2015network}, Rv2516c est une
-cible, non elle-même annotée comme facteur de transcription, de cinq régulateurs, parmi lesquels
-Rv0081, le relais principal du régulon de dormance DosR, plaçant le gène dans un contexte
-régulateur de dormance/hypoxie~; ce contexte est néanmoins découplé sous la condition antibiotique
-étudiée ici, où les cibles canoniques de DosR \textit{hspX} et Rv2623 s'effondrent tandis que
-Rv2516c elle-même monte, montrant que DosR ne gouverne pas la réponse du gène au stress
-antibiotique spécifiquement.
+argumentant contre un hétérodimère obligatoire entre les deux protéines. La région codante et
+intergénique Rv2516c--Rv2517c (1\,052~pb) ne porte aucune insertion IS6110 non-référence sur
+5\,169 génomes MTBC couvrant 614 clades phylogénétiques et aucune délétion canonique de région de
+différence à moins de 10~kb, tandis que ses voisins immédiats sont nettement moins stables~: un
+clade de quatre souches de \textit{M.\ orygis} porte une insertion IS6110 partagée et héritée à
+l'intérieur de Rv2515c, et deux souches de lignée~8 en portent une à l'intérieur de Rv2514c
+(Tableau supplémentaire~S3), indiquant que le locus toxine--antitoxine voisin est assez dispensable pour être inactivé dans des
+sous-lignées entières tandis que la paire Rv2516c--Rv2517c elle-même reste intacte. Cohérent avec cette
+asymétrie, le graphe d'interaction STRING complet (693\,013~arêtes) ne liste que trois partenaires
+protéiques pour Rv2516c (Rv2517c, Rv2515c, Rv2514c)~; au seuil de confiance standard, le degré de
+Rv2516c (3, 6e percentile à l'échelle du génome) et la taille de son second voisinage
+(14~protéines, 4e percentile) sont environ cinq fois inférieurs à un modèle nul apparié sur le seul
+degré (médiane de 68~seconds voisins), et retirer chaque canal d'évidence positionnel (voisinage
+génomique, fusion de gènes, co-occurrence phylogénétique) retire \emph{toutes} les arêtes de
+Rv2516c, y compris celle vers Rv2517c~: au sein de STRING, ce module n'existe que par proximité
+chromosomique, non par une quelconque preuve expérimentale, de base de données ou de fouille de
+texte, et aucun autre locus de H37Rv ne porte le même clan Pfam hélice-tour-hélice sans relation de
+paralogie déjà connue. STRING ne contribue donc aucune hypothèse fonctionnelle indépendante ici.
+Au-delà de cette comparaison ciblée à un petit nombre de gènes candidats, un test d'enrichissement
+formel a demandé si le voisinage de co-expression de Rv2516c (les 50 et 100~meilleurs gènes
+identifiés par le balayage non biaisé ci-dessus, dans chaque compendium séparément) est
+statistiquement enrichi pour quatre régulons curés. Aucun des seize tests (deux compendiums
+$\times$ deux tailles de liste $\times$ quatre régulons) n'atteint la significativité après
+correction pour tests multiples, et aucun n'atteint même le seuil non corrigé de 0,05 dans les deux
+compendiums à la fois. Le résultat le plus net concerne le régulon classique de dormance DosR
+\citep{rustad2008dosr}~: recouvrement nul, dans les deux compendiums, aux deux tailles de liste, pas
+seulement un excès non significatif~; le régulon SigH montre le même motif. Ceci fait passer
+l'hypothèse persistance/DosR, auparavant seulement une lecture plausible du contexte du gène (Rv0081,
+le relais principal du régulon de dormance DosR, figure parmi les cinq régulateurs en amont de
+Rv2516c dans le réseau de facteurs de transcription à l'échelle du génome,
+\citep{minch2015network}), du statut de non testée à celui de formellement testée et réfutée au
+niveau transcriptionnel~: la réponse de Rv2516c au stress antibiotique ne suit ni les dommages à
+l'ADN (ci-dessus) ni un programme de dormance/hypoxie.
 
-\subsection{Quatre lignes de preuve indépendantes, individuellement non significatives, convergent
+\subsection{Cinq lignes de preuve indépendantes, individuellement non significatives, convergent
 sur les mêmes résidus basiques du domaine hélice-tour-hélice}
 
-Au-delà de l'homologie au niveau de la famille établie ci-dessus, trois analyses supplémentaires,
+Au-delà de l'homologie au niveau de la famille établie ci-dessus, quatre analyses supplémentaires,
 méthodologiquement indépendantes, pointent vers les mêmes résidus spécifiques de l'unité B
-(\Cref{fig:convergence}).
+(\Cref{fig-convergence}).
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{figures/figure2_convergence.pdf}
-\caption{Quatre lignes de preuve indépendantes convergent sur les mêmes résidus basiques du domaine
-hélice-tour-hélice. \textbf{(a)} Fraction des résidus exposés qui sont basiques~: la fenêtre de
+\caption{Quatre des cinq lignes de preuve indépendantes convergent sur les mêmes résidus basiques du
+domaine hélice-tour-hélice (la cinquième, la complémentarité électrostatique, n'est pas illustrée
+ici). \textbf{(a)} Fraction des résidus exposés qui sont basiques~: la fenêtre de
 reconnaissance candidate (111--121) se distingue de la protéine entière, de l'unité A de type
 ferredoxine (témoin de spécificité), et de l'hélice immédiatement adjacente. \textbf{(b)} Identité
 par position à travers la fenêtre hélice-tour-hélice (98--121) sur quatre lignées mycobactériennes
@@ -469,7 +670,7 @@ l'unité B. \textbf{(d)} Augmentation de la distance protéine--ADN après subst
 trois mêmes résidus (sauvage $\to$ mutant), restreinte aux résidus en contact réel avec l'ADN à
 l'état de référence~; la plus grande augmentation suivante parmi les résidus de contact est montrée
 pour échelle.}
-\label{fig:convergence}
+\label{fig-convergence}
 \end{figure}
 
 Premièrement, la charge de surface exposée. Sur l'hélice de reconnaissance putative (résidus
@@ -493,8 +694,23 @@ d'empilement ordinaire) et six sont exposées (Arg111, Gln112, Arg113, His115, G
 parmi lesquelles exactement les trois résidus choisis plus tard, sur des bases structurales seules,
 pour le témoin négatif mutant ci-dessous, plus un quatrième.
 
+Un confondant spécifique à cette lecture, les épitopes T hyperconservés, une caractéristique
+documentée et contre-intuitive de l'évolution des antigènes de \mtb{} dans laquelle les épitopes
+sont préférentiellement conservés plutôt que diversifiés pour échapper à la reconnaissance
+immunitaire, a été testé directement plutôt que supposé absent. Deux 15-mères IEDB chevauchants
+couvrent 22 des 24 résidus de la fenêtre 98--121 et les huit résidus du cœur invariant 111--118~;
+sur quatre enregistrements de test indépendants en HLA de classe~II humain, les quatre sont
+négatifs. Le confondant n'est donc pas seulement non documenté, il a été testé et n'est pas soutenu
+pour cette fenêtre précise, si bien que la lecture fonctionnelle du signal de conservation est
+renforcée par élimination d'une alternative plutôt que par preuve directe. La même recherche a fait
+émerger le seul épitope T positif de toute la protéine, un peptide de réponse IFN$\gamma$ validé
+expérimentalement (résidus 227--246) en CMH bovin \citep{farrell2016botb}, qui tombe dans l'unité C,
+le domaine sur lequel on en sait le moins par ailleurs~; un contexte immunologique bovin, et non
+humain, limite jusqu'où ceci peut être extrapolé, et sa position par rapport à la surface de l'unité
+n'a pas été évaluée séparément.
+
 Troisièmement, la géométrie de contact à résolution atomique issue d'un test direct de
-co-repliement protéine--ADN (\Cref{fig:site}). Le score Boltz-2 agrégé est, à lui seul, non
+co-repliement protéine--ADN (\Cref{fig-site}). Le score Boltz-2 agrégé est, à lui seul, non
 informatif~: l'unité B sauvage et son mutant R113A/H115A/R118A, chacun co-replié avec le même
 duplex d'ADN, rendent un pTM d'interface quasi identique (0,890 et 0,889). Lu au niveau des
 contacts atomiques plutôt qu'au niveau du score agrégé, le tableau change cependant. Dans la
@@ -517,6 +733,21 @@ opérateur, le même duplex d'ADN), 27,9~\% des résidus de BldC se situent à m
 l'ADN contre 28,3~\% pour l'unité B, le même ordre de grandeur qu'un régulateur connu pour lier cet
 ADN.
 
+Quatrièmement, la complémentarité électrostatique calibrée, une méthode entièrement indépendante
+des biais documentés plus bas (Section~3.5) pour le co-repliement génératif, et immunisée contre
+eux. Le potentiel électrostatique de BldC seule, échantillonné à ses propres résidus de contact ADN
+déterminés expérimentalement, est la fenêtre la plus électropositive de toute sa propre surface
+exposée (100e percentile de 15~fenêtres glissantes), validant la méthode contre un témoin positif
+dont les résidus de contact sont connus indépendamment de tout modèle. Le patch candidat sur l'unité
+B (Arg111, Arg113, His115, Arg118) suit le même motif qualitatif, se classant au 92,9e percentile de
+sa propre surface, mais son potentiel absolu ($+1,02$~kT/e) est environ trois fois plus faible que
+le patch validé de BldC ($+3,07$ à $+3,34$~kT/e), et la meilleure fenêtre non contrainte de l'unité
+A, un domaine sans rôle connu de liaison à l'ADN, atteint $+2,79$~kT/e, proche du témoin positif
+validé. Ceci est directionnellement cohérent avec, mais nettement plus faible qu'un authentique
+patch de liaison à l'ADN, et est par construction aveugle à l'identité de la séquence, puisque le
+potentiel électrostatique continu ne dépend que de la géométrie du squelette phosphate, jamais de
+l'identité des bases~; il ne peut à lui seul se prononcer sur la spécificité de séquence.
+
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{figures/figure3_site.pdf}
@@ -525,19 +756,52 @@ co-repliement Boltz-2 sauvage (J1) place l'unité hélice-tour-hélice (bleu) da
 d'ADN (gris)~; les trois résidus de contact candidats sont montrés en bâtonnets (orange).
 \textbf{(b)} Gros plan sur l'hélice de reconnaissance, avec Arg113, His115 et Arg118 étiquetés~;
 il s'agit du même modèle sous-tendant les distances et la réponse au mutant rapportées en
-\Cref{fig:convergence}c,d.}
-\label{fig:site}
+\Cref{fig-convergence}c,d.}
+\label{fig-site}
 \end{figure}
 
-Homologie, charge exposée, conservation inter-genre et géométrie de contact atomique, quatre
+Homologie, charge exposée, conservation inter-genre, géométrie de contact atomique et
+complémentarité électrostatique calibrée, cinq
 analyses aux biais méthodologiques indépendants, convergent ainsi sur les mêmes résidus basiques
-(Arg111, Arg113, His115, Arg118). Aucune des quatre analyses n'est individuellement significative,
+(Arg111, Arg113, His115, Arg118), résumées au \Cref{tab-convergence}. Aucune des cinq analyses
+n'est individuellement significative,
 et la convergence est rapportée comme un corps cohérent de preuve circonstancielle en faveur d'une
 surface candidate de liaison à l'ADN, non comme une preuve de liaison à l'ADN, encore moins de sa
-spécificité de séquence.
+spécificité de séquence, une question que la section suivante montre hors de portée de tout test
+computationnel tenté ici.
 
-\subsection{Les recherches d'opérateur palindromique et à répétition directe sont négatives, et un
-test d'auto-association apo manque de puissance pour trancher le mécanisme}
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{@{}p{2.7cm}p{7.3cm}p{4.3cm}@{}}
+\toprule
+Axe & Signal quantitatif sur la fenêtre candidate & Pourquoi non significatif isolément \\
+\midrule
+Homologie & Unité B assignée à la famille AlpA/excisionase/RDF à hélice-tour-hélice ailée,
+$E=1,3\times10^{-10}$ (unité B seule) contre $5,9\times10^{-7}$ (protéine entière) & Assignation
+de repli au niveau du domaine, pas un test au niveau du résidu \\
+Charge exposée & 0,44 des résidus 111--121 exposés et basiques, contre 0,19 protéine entière, 0,09
+unité A, 0,00 hélice adjacente & Propriété générique de la plupart des hélices de surface, non
+spécifique de la liaison à l'ADN \\
+Conservation inter-genre & Fenêtre 98--121 identique à 86,5~\% contre 62,6~\% pour le reste de la
+protéine (4 lignées NTM indépendantes)~; cœur 111--118 invariant sans exception & $n=4$ lignées
+indépendantes \\
+Géométrie de contact & Arg113/His115/Arg118 parmi les contacts ADN les plus proches à l'état de
+base (2,11/1,54/3,43~\ang{} contre 7,19~\ang{} médian)~; plus grande augmentation de distance sur
+mutation parmi les contacts génuins & Score Boltz-2 agrégé lui-même insensible (ipTM 0,890 contre
+0,889, sauvage contre mutant) \\
+Électrostatique & Patch candidat au 92,9e percentile de sa propre surface (témoin positif
+BldC~: 100e), mais $+1,02$~kT/e, environ trois fois plus faible que le patch validé de BldC
+($+3,07$ à $+3,34$~kT/e) & Aveugle à l'identité des bases par construction \\
+\bottomrule
+\end{tabular}
+\caption{Les cinq lignes de preuve convergentes et individuellement non concluantes en faveur
+d'une surface candidate de liaison à l'ADN sur l'unité B (Arg111, Arg113, His115, Arg118).}
+\label{tab-convergence}
+\end{table}
+
+\subsection{Les recherches d'opérateur palindromique et à répétition directe sont négatives, et le
+co-repliement génératif protéine--ADN ne peut trancher la spécificité de séquence}
 
 Trois tests supplémentaires ont sondé l'hypothèse de liaison à l'ADN sous des angles différents, et
 aucun n'étend la convergence ci-dessus~; chacun restreint un modèle mécanistique spécifique plutôt
@@ -552,6 +816,19 @@ strictement, des paires de gènes \emph{voisins} de la même rareté (49 paires 
 du génome), la concordance parfaite n'est pas unique~: 9 de ces 49 paires (18,4~\%) sont elles-mêmes
 à égalité à l'indice de Jaccard 1,000, cohérent avec un effet de bloc régional (gain ou perte
 partagés à travers une fenêtre génomique locale) plutôt qu'une signature spécifique à cette paire.
+Au sein de cette classe de 9~paires à égalité (7~blocs génomiques disjoints une fois les fenêtres
+glissantes chevauchantes regroupées), la question littérale que la comparaison visait à trancher
+reçoit une réponse négative~: 2 des 9 (22~\%) sont elles-mêmes des paires toxine--antitoxine
+validées, statistiquement indiscernables du taux de 9 sur 40 (22~\%) dans le reste du bassin de
+comparaison ($p=1,000$, test exact de Fisher), si bien qu'atteindre une concordance parfaite n'est
+pas, en soi, un marqueur de modularité fonctionnelle. La classe de référence dans son ensemble n'est
+cependant pas générique~: les paires de gènes voisins et co-rares à l'échelle du génome sont
+enrichies d'un facteur 7 en systèmes toxine--antitoxine validés par rapport aux autres paires
+voisines (22,4~\%, 11 sur 49, contre 3,4~\%, 129 sur 3\,795, $p=9,0\times10^{-7}$), et le voisinage
+immédiat de la paire Rv2516c--Rv2517c inclut lui-même un tel système validé (Rv2514c--Rv2515c).
+Rv2516c--Rv2517c rejoint donc une classe de paires de gènes intrinsèquement atypique, non par sa
+concordance parfaite spécifiquement mais par sa rareté et son adjacence partagées~; ceci déplace la
+plausibilité indirectement plutôt que de démontrer que la paire elle-même est un module fonctionnel.
 Ce résultat ne touche pas la co-expression fonctionnelle démontrée par RNA-seq ci-dessus
 (Section~3.3), qui est une preuve d'une nature différente, mais il retire la co-occurrence
 phylogénétique comme argument indépendant en faveur d'un module fonctionnel distinctif.
@@ -563,7 +840,7 @@ modèles les plus simples d'opérateur palindromique ou en tandem pour cette fen
 spécifique, sans exclure un mode de liaison asymétrique, monomérique, que les données et outils
 actuels ne peuvent tester.
 
-Enfin, nous avons demandé si l'unité B s'auto-associe en homodimère apo, puisque la dimérisation
+Nous avons ensuite demandé si l'unité B s'auto-associe en homodimère apo, puisque la dimérisation
 est la prémisse structurale d'un modèle d'opérateur palindromique. Le résultat ne tranche pas la
 question, pour deux raisons indépendantes et qui se renforcent mutuellement. Sur chaque métrique
 (pTM d'interface, erreur alignée prédite inter-chaînes minimale, compte de contacts d'interface),
@@ -586,6 +863,61 @@ comme la réfutant, puisqu'un mécanisme couplé à l'ADN serait par constructio
 apo. C'est un résultat négatif de méthode, non de biologie, une distinction que nous maintenons de
 bout en bout plutôt que de la faire s'effondrer en une lecture confirmatoire ou réfutatoire.
 
+Le résultat apo laissait ouverte la possibilité que la discrimination du pipeline exige simplement
+la présence d'ADN, puisque la propre dimérisation de BldC semblait couplée à son opérateur. Nous
+avons donc testé ceci directement avec le panel pré-enregistré E1--E4 (Méthodes), en lisant le score
+agrégé contre le critère d'acceptation fixé avant que le panel ne soit lancé.
+\begin{center}
+\small
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Job & Condition & ipTM & PAE (inter-chaîne) & Contacts d'interface \\
+\midrule
+E1 & 2$\times$unité B + ADN de longueur cognate (test) & 0,930 & 0,48~\ang{} & 205 \\
+E2 & 2$\times$unité B + ADN brouillé (témoin de séquence) & 0,928 & 0,46~\ang{} & 199 \\
+E4 & 2$\times$BldC + même ADN (témoin positif cognat) & 0,905 & 0,65~\ang{} & 212 \\
+E3 & 2$\times$unité A + même ADN (témoin de domaine) & 0,854 & 0,44~\ang{} & 126 \\
+\bottomrule
+\end{tabular}
+\end{center}
+À première vue, E1 (ipTM 0,930) est le score le plus élevé obtenu dans toute cette étude, dépassant
+même E4, la reconstruction d'un co-cristal réel, déterminé structuralement. Le critère
+d'acceptation échoue cependant dès sa toute première clause~: E2, le même homodimère avec l'ADN dont
+la séquence a été brouillée à dinucléotides préservés, score à 0,002 d'ipTM d'E1, avec une PAE
+inter-chaîne et un compte de contacts d'interface indiscernables. E4 n'adoucit pas cet échec, il
+l'approfondit~: le seul complexe de ce panel à structure déterminée expérimentalement, cognate en
+séquence, score \emph{en dessous} d'E1 et d'E2 sur toute métrique agrégée, et enregistre la pire PAE
+inter-chaîne du panel (0,65~\ang{} contre 0,44--0,48~\ang{} pour les trois autres), malgré la plus
+grande interface en compte brut de contacts (un écart trop faible, 7~contacts sur $\sim$200, pour
+peser à lui seul). Sur ces métriques, le pipeline (Boltz-2, inférence CPU, échantillon de diffusion
+unique, chaînes de 100--200~résidus plus un duplex de 22~pb) ne discrimine pas un complexe
+protéine--ADN cognat structuralement validé d'un cas de test hétérologue ou d'un témoin négatif de
+séquence brouillée, et ne discrimine que faiblement un domaine sans rôle connu de liaison à l'ADN.
+Le score d'E1, apparemment frappant, obtenu ici ne peut donc être lu comme une preuve, d'aucune
+force, de liaison protéine--ADN spécifique de séquence ou même simplement générique par Rv2516c,
+puisque le même pipeline attribue un score comparable ou supérieur à un leurre brouillé et à un
+appariement hétérologue qu'à un complexe authentique, résolu indépendamment. Combiné au résultat apo
+ci-dessus, le co-repliement génératif échoue, sur deux tests indépendants (auto-association apo et
+formation de complexe protéine--ADN holo), à fournir un quelconque pouvoir discriminant démontré
+pour ce type de question à cette taille de système~; nous rapportons ceci comme un résultat de mise
+en garde méthodologique en soi, pas seulement comme un négatif pour Rv2516c.
+
+La voie générative étant fermée, nous avons tenté une alternative non générative, fondée sur la
+physique~: la complémentarité électrostatique (Section~3.4) en est une, et est par construction
+aveugle à l'identité des bases. Une seconde approche non générative, complémentaire, dérivant un
+motif consensus de lecture de base à partir de structures homologues résolues, a été tentée mais est
+bloquée par les données actuellement disponibles plutôt que par un test manqué. Des trois structures
+homologues citées plus haut (Section~3.2, BldC, AlpA, RdfS), seule celle de BldC est un co-cristal
+avec l'ADN~; AlpA (PDB 8C3T) et RdfS (PDB 8DGL) sont toutes deux des structures apo sans résidu de
+contact ADN à lire. Sur les 21~résidus de contact ADN réel de BldC, seuls trois (Asp24, Lys26,
+Arg30) font un contact spécifique de base plutôt que de squelette seul, couvrant une fenêtre de deux
+paires de bases seulement, bien trop courte pour soutenir un consensus de demi-site statistiquement
+défendable (une correspondance de deux paires de bases est attendue environ tous les 16~pb par
+hasard seul). C'est en soi une observation structurale informative sur cette famille de wHTH, une
+reconnaissance apparemment dominée par la forme et les contacts de squelette plutôt que par une
+lecture étendue de bases, au moins pour ce représentant, mais elle ferme plutôt qu'elle n'ouvre une
+voie vers un consensus de séquence avec les structures actuellement disponibles.
+
 \section{Discussion}
 
 L'interrogation domaine par domaine est le résultat méthodologique qui dépasse ce seul gène.
@@ -594,7 +926,11 @@ avec plusieurs replis non apparentés tour à tour, la protéine ribosomale S6, 
 facteur sigma, un régulateur de type Lrp/AsnC, chacune défendable jusqu'à être testée directement
 et chacune fausse. Isoler le domaine central et le rechercher seul a élevé le signal disponible le
 plus fort de plus de 4\,500~fois en valeur $E$ et a produit la première assignation confiante pour
-cette protéine. La leçon se généralise~: une protéine dark qui fusionne en réalité plusieurs
+cette protéine. Ceci n'était pas une simple heuristique utile~: l'erreur alignée prédite
+inter-domaines montre que les trois unités ne sont pas empaquetées rigidement les unes contre les
+autres, au-dessus même de la plage d'une paire de référence à la flexibilité établie
+expérimentalement, si bien qu'une requête pleine longueur ne pouvait pas, même en principe, porter
+une information fiable sur leur agencement conjoint. La leçon se généralise~: une protéine dark qui fusionne en réalité plusieurs
 domaines, chacun individuellement caractérisable, peut paraître entièrement opaque, ou pire,
 assignable de façon trompeuse à la mauvaise famille, quand elle est traitée comme une requête
 unique, parce que le score sur la protéine entière dilue à la fois un signal réel au niveau du
@@ -602,31 +938,46 @@ domaine et donne un poids égal à des correspondances faibles et non apparenté
 séquence.
 
 La convergence de preuves en faveur d'une surface candidate de liaison à l'ADN sur l'unité B,
-homologie, charge exposée, conservation inter-genre et géométrie de contact atomique pointant
+homologie, charge exposée, conservation inter-genre, géométrie de contact atomique et
+complémentarité électrostatique calibrée pointant
 toutes vers Arg111, Arg113, His115 et Arg118, est, précisément parce qu'elle est désormais
-construite à partir de quatre méthodes indépendantes, le point où la discipline anti-survente
-importe le plus, et non le moins. Chaque analyse reste individuellement non significative, aucun
-test de spécificité de séquence n'a été tenté (le duplex d'ADN utilisé de bout en bout est le
-propre opérateur de BldC, pas un site candidat pour Rv2516c), et chaque prédiction structurale
-rapportée ici provient d'une méthode de criblage unique (Boltz-2, inférence CPU) plutôt que d'une
-structure déterminée expérimentalement ou d'un prédicteur de référence validé. Nous évitons
-délibérément d'affirmer que Rv2516c lie l'ADN, encore moins ce qu'elle lie~; le langage approprié,
+construite à partir de cinq méthodes indépendantes, le point où la discipline anti-survente
+importe le plus, et non le moins. Chaque analyse reste individuellement non significative, et nous
+avons délibérément poussé jusqu'à tester directement la spécificité de séquence plutôt que de la
+laisser non testée~: un panel pré-enregistré co-repliant le domaine candidat avec son ADN de
+longueur cognate, ce même ADN brouillé, et un domaine non apparenté, aux côtés d'une reconstruction
+d'un authentique complexe cognat résolu structuralement, a montré que le co-repliement génératif
+(Boltz-2) ne discrimine le complexe cognat résolu d'aucun des deux leurres, sur aucune métrique
+agrégée, à cette taille de système. Un second test, non génératif, électrostatique, corrobore le
+caractère électropositif du patch candidat mais est par construction aveugle à l'identité des bases,
+et une troisième approche, fondée sur un consensus, est bloquée par la rareté des co-cristaux
+protéine--ADN homologues résolus plutôt que par un résultat négatif. Nous ne traitons donc plus la
+spécificité de séquence comme une question computationnelle ouverte pour ce système~: toute méthode
+à notre disposition a été tentée, et aucune ne peut y répondre. Nous évitons
+délibérément d'affirmer que Rv2516c lie l'ADN, encore moins ce qu'elle lie, ou de façon spécifique
+de séquence~; le langage approprié,
 et celui utilisé tout au long de cette étude, est celui d'un site candidat soutenu par un corps de
-preuve convergent mais individuellement non concluant.
+preuve convergent mais individuellement non concluant, dont la spécificité de séquence requiert
+désormais un test biochimique direct plutôt que davantage de calcul.
 
-Un contexte fonctionnel tentatif, et explicitement non prouvé, mérite d'être énoncé comme une
-hypothèse à tester plutôt que comme une conclusion. Le partenaire d'opéron de Rv2516c, Rv2517c, se
+Un contexte fonctionnel tentatif, auparavant énoncé seulement comme une hypothèse, peut désormais
+être rapporté comme formellement testé. Le partenaire d'opéron de Rv2516c, Rv2517c, se
 situe immédiatement en aval d'une paire toxine--antitoxine validée et est l'un des trois seuls
 gènes, aux côtés de la toxine \textit{relK} et de Rv3290c, régulés à la hausse dans un crible qPCR
 indépendant de 32~gènes de la réponse à la moxifloxacine, où il est explicitement classé comme gène
 lié à la persistance plutôt que comme faisant partie de la réponse SOS
 \citep{iacobino2021moxifloxacin}~; ceci est cohérent avec le motif d'induction de stress
 antibiotique, et non de dommage à l'ADN, établi directement pour l'opéron par la réanalyse RNA-seq
-de la Section~3.3. Avec le contexte régulateur du gène (le relais de dormance DosR Rv0081, un
-module de co-expression associé à ArsR) et l'absence générale de Rv2516c de toute littérature
-spécifique aux dommages de l'ADN, ceci suggère un rôle lié à la persistance plutôt qu'au stress
-génotoxique aigu, mais ceci reste du contexte, non une propriété démontrée de Rv2516c elle-même, et
-nous l'énonçons comme une hypothèse motivant de futures expériences plutôt que comme un résultat.
+de la Section~3.3. La présence du gène parmi les cibles de Rv0081, le relais principal du régulon de
+dormance DosR, dans le réseau de facteurs de transcription à l'échelle du génome, laissait
+auparavant cette possibilité ouverte comme liée à la dormance~; un test formel d'enrichissement
+hypergéométrique du voisinage de co-expression non biaisé, à l'échelle du génome, de Rv2516c contre
+les régulons DosR et SigH a trouvé un recouvrement nul dans les deux compendiums RNA-seq
+indépendants aux deux tailles de liste testées, pas seulement un excès non significatif.
+L'hypothèse persistance/dormance passe donc du statut de contexte non testé à celui de formellement
+testée et réfutée au niveau transcriptionnel, aux côtés de l'hypothèse dommages-à-l'ADN réfutée
+ci-dessus~: la réponse de Rv2516c au stress antibiotique est générale, ne suivant ni la voie SOS ni
+un programme de dormance/hypoxie.
 
 Le tableau de l'essentialité a lui aussi besoin d'un cadrage plus prudent qu'une simple binaire.
 Rv2516c n'est pas essentielle au sens strict et uniforme sur toute sa longueur~: la couverture par
@@ -650,42 +1001,84 @@ site actif conventionnel.
 
 Plusieurs limites s'appliquent à l'étude entière et sont énoncées ensemble ici plutôt que
 distribuées au fil du texte. Chaque prédiction structurale repose sur une méthode computationnelle
-unique (Boltz-2 sur CPU, un échantillon de diffusion unique)~; aucune structure déterminée
-expérimentalement n'existe pour aucune partie de Rv2516c ni pour ses plus proches homologues. Les
+générative unique (Boltz-2 sur CPU, un échantillon de diffusion unique), dont nous montrons
+directement que le pouvoir de discrimination de la spécificité de séquence est indiscernable du
+hasard à cette taille de système~; aucune structure déterminée expérimentalement n'existe pour
+aucune partie de Rv2516c ni pour ses plus proches homologues. Les
 signaux de conservation et de charge les plus forts reposent sur de petits nombres (quatre résidus
-basiques exposés, quatre lignées phylogénétiques indépendantes). Aucun test rapporté ici n'adresse
-la spécificité de séquence de la liaison à l'ADN, et l'identité de la vraie fonction moléculaire de
-tout domaine de liaison à l'ADN (le mécanisme, l'état physiologique, et ce qu'il régule précisément)
-reste entièrement ouverte, plus encore pour l'unité C, dont le repli est établi mais dont la
-fonction n'a aucune assignation candidate d'aucune méthode utilisée ici. Seul un test biochimique
-direct, retard sur gel par mobilité électrophorétique ou équivalent, peut faire passer l'hypothèse
-de liaison à l'ADN d'un corps convergent de preuve computationnelle à une propriété démontrée.
+basiques exposés, quatre lignées phylogénétiques indépendantes), et la phylogénie ad hoc utilisée
+pour écarter un transfert horizontal récent échoue à son propre contrôle de validité pré-enregistré
+sur plusieurs clades décisifs, si bien que seul le test, plus puissant, de divergence relative, non
+la topologie fine, soutient cette conclusion. La spécificité de séquence de la liaison à l'ADN a
+désormais été sondée par toute voie computationnelle à notre disposition, le co-repliement génératif
+deux fois (apo et holo) et une approche non générative électrostatique et de consensus structural
+une fois, et aucune ne l'a tranchée~; seul un test biochimique direct, retard sur gel par mobilité
+électrophorétique, empreinte, ou équivalent, peut faire passer l'hypothèse de liaison à l'ADN d'un
+corps convergent de preuve computationnelle à une propriété démontrée, spécifique de séquence.
+L'identité de la vraie fonction moléculaire de tout domaine de liaison à l'ADN (le mécanisme, l'état
+physiologique, et ce qu'il régule précisément) reste entièrement ouverte, plus encore pour l'unité
+C, dont le repli est établi, dont l'acquisition sur la branche menant vers \mtb{} semble plus récente
+que le noyau ferredoxine/hélice-tour-hélice, et dont le premier fait ancré expérimentalement est un
+épitope T bovin validé, mais qui n'a toujours aucune assignation de fonction moléculaire candidate
+d'aucune méthode utilisée ici. Quatre voies indépendantes de type « guilt-by-association »,
+co-expression à l'échelle du génome, régulons de dormance DosR et SigH, réseau d'interaction STRING,
+et instabilité structurale par IS6110, ont chacune été testées et refermées sans révéler de nouveau
+partenaire ni de programme régulateur, si bien que la fonction de Rv2516c et de l'unité C en
+particulier nécessitera soit une structure déterminée expérimentalement, soit une expérience
+biochimique ciblée, non davantage d'inférence contextuelle.
 
 \section{Conclusion}
 
 Rv2516c, entièrement non étudiée avant ce travail, se résout sous interrogation domaine par domaine
 en trois unités structurales indépendantes~: un domaine N-terminal de type ferredoxine de fonction
 inconnue (DUF8830), une hélice-tour-hélice centrale de la famille AlpA/excisionase, et un feuillet
-$\beta$ C-terminal de type immunoglobuline dont la fonction reste entièrement ouverte. Isoler le
+$\beta$ C-terminal de type immunoglobuline dont la fonction reste largement ouverte. Isoler le
 domaine central plutôt que rechercher la protéine entière a été l'étape unique qui a transformé une
-protéine dark ambiguë, assignée à tort à répétition, en une protéine classifiée avec confiance, une
+protéine dark ambiguë, assignée à tort à répétition, en une protéine classifiée avec confiance,
+justifiée non seulement par un gain de plus de 4\,500~fois en valeur $E$ mais physiquement, par une
+erreur alignée prédite inter-domaines montrant que les trois unités ne sont pas empaquetées
+rigidement ensemble, une
 stratégie que nous nous attendons à voir se généraliser à d'autres protéines dark multi-domaines.
-Le gène se situe dans une cassette génomique ancienne et domestiquée qui répond à un stress
-antibiotique général plutôt qu'à des dommages à l'ADN, et quatre lignes de preuve indépendantes,
-individuellement non concluantes, convergent sur une surface candidate de liaison à l'ADN au sein
-du domaine hélice-tour-hélice, une hypothèse que cette étude soulève mais ne tranche pas. Avec une
-vulnérabilité CRISPRi mesurée de façon robuste, une restriction au niveau du genre et une nouveauté
-complète, Rv2516c est proposée comme cible candidate dont la fonction moléculaire, et son troisième
-domaine en particulier, définit désormais la prochaine étape expérimentale.
+Le gène se situe dans une cassette génomique ancienne et domestiquée, structuralement stable sur
+des milliers de génomes cliniques, dont le module hélice-tour-hélice central est la partie la plus
+conservée de la protéine à l'échelle du genre, tandis que l'unité C-terminale semble être une
+acquisition plus récente restreinte à la branche menant vers \mtb{} et porte désormais son premier
+fait ancré expérimentalement, un épitope T bovin validé. La cassette répond à un stress
+antibiotique général plutôt qu'à des dommages à l'ADN ou à un programme de dormance/DosR, les deux
+désormais formellement testés et réfutés, et cinq lignes de preuve indépendantes,
+individuellement non concluantes, dont un axe électrostatique calibré, convergent sur une
+surface candidate de liaison à l'ADN au sein
+du domaine hélice-tour-hélice~; savoir si cette surface discrimine la séquence de l'ADN n'a en
+revanche pu être tranché par aucune méthode computationnelle tentée ici, y compris un panel de
+co-repliement génératif pré-enregistré qui a échoué à distinguer un complexe cognat structuralement
+validé d'un leurre brouillé ou hétérologue, un résultat de mise en garde méthodologique en soi.
+Avec une
+vulnérabilité CRISPRi mesurée de façon robuste, une restriction au niveau du genre, une nouveauté
+complète, et quatre voies de type « guilt-by-association » refermées qui laissent l'inférence
+contextuelle épuisée, Rv2516c est proposée comme cible candidate dont la fonction moléculaire, et
+son troisième
+domaine ainsi que la spécificité de séquence de sa liaison à l'ADN en particulier, nécessitent
+désormais un travail expérimental direct plutôt que davantage de calcul.
+
+\section*{Déclaration sur l'IA générative et les technologies assistées par IA dans le processus de rédaction}
+
+Lors de la préparation de ce travail, l'auteur a utilisé Claude Code (Anthropic), un environnement
+logiciel à agent IA propulsé par le modèle Claude Sonnet, pour la récupération de données in
+silico, l'analyse statistique, la vérification bibliographique et une assistance à la rédaction,
+comme décrit dans le Matériel et méthodes. Après avoir utilisé cet outil, l'auteur a relu, vérifié
+indépendamment contre les sources primaires, et édité le contenu si nécessaire, et assume
+l'entière responsabilité du contenu de cette publication.
 
 \section*{Disponibilité des données et du code}
 
-La source du manuscrit, les figures et la bibliographie sont disponibles à l'adresse
-\url{https://github.com/cguyeux/rv2516c-mtbc}. Les scripts d'analyse (segmentation en domaines,
-analyse des recherches d'homologie, cartographie de conservation, génération et analyse des
-contacts d'interface pour les tâches Boltz-2, recherche de motif opérateur, production des
-figures) et les résultats intermédiaires seront déposés dans le même dépôt avant soumission. Le
-modèle AlphaFold de Rv2516c est disponible dans l'AlphaFold Protein Structure Database
+La source du manuscrit, les figures, la bibliographie et les scripts d'analyse (segmentation en
+domaines, analyse des recherches d'homologie, cartographie de conservation, génération et analyse
+des contacts d'interface pour les tâches Boltz-2, recherche de motif opérateur, production des
+figures) sont disponibles à l'adresse \url{https://github.com/cguyeux/rv2516c-mtbc}. Quatre
+tableaux supplémentaires (conservation inter-genre, données de contingence du test de
+McDonald--Kreitman, insertions IS6110 dans la fenêtre du locus, et listes des meilleurs partenaires
+de co-expression à l'échelle du génome~; Tableaux supplémentaires~S1--S4) sont fournis dans le même
+dépôt. Le modèle AlphaFold de Rv2516c est disponible dans l'AlphaFold Protein Structure Database
 (AF-I6YDM0-F1).
 
 \bibliographystyle{unsrtnat}
