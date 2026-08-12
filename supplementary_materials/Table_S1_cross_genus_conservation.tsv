@@ -1,0 +1,17 @@
+# Table S1. Cross-genus conservation of Rv2516c against six non-tuberculous mycobacterial orthologs.
+# M. avium, M. bouchedurhonense and M. timonense share an identical per-position identity profile (M. avium complex) and are treated as one independent phylogenetic lineage, leaving four independent lineages overall.
+# is_mtbap = member of the M. shinjukuense/MTBAP clade, the closest outgroup used in the housekeeping-gene control tree.
+species	independent_phylogenetic_lineage	is_mtbap	blast_percent_identity	query_coverage_percent	evalue	n_aligned_positions	n_identical_positions
+M_avium	MAC_clade_avium_bouchedurhonense_timonense	False	52.841	64.4	1.09e-40	168	93
+M_bouchedurhonense	MAC_clade_avium_bouchedurhonense_timonense	False	52.841	64.4	1.24e-40	168	93
+M_celatum	M_celatum	False	64.557	59.2	3.98e-57	157	102
+M_shinjukuense	M_shinjukuense	True	74.157	100.0	4.61e-132	267	198
+M_simiae	M_simiae	False	57.368	69.3	9.88e-59	184	109
+M_timonense	MAC_clade_avium_bouchedurhonense_timonense	False	52.841	64.4	1.25e-40	168	93
+
+# Per-unit identity, deduplicated to four independent lineages (main text figure/table source).
+unit	label	n_positions	identity_percent_4_lineages_dedup	identity_percent_6_species_raw
+unite_B_wHTH	unité B (wHTH AlpA, 88-147)	60	83.8	83.1
+unite_C_Ig_178_267	unité C (Ig-like, 178-267)	90	67.2	67.2
+unite_A_ferredoxin	unité A (ferredoxin-like, 1-87)	87	55.1	50.0
+linker_148_177	linker (148-177, désordonné)	30	47.2	47.1

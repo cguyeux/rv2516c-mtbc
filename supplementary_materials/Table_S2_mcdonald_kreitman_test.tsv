@@ -1,0 +1,28 @@
+# Table S2. McDonald-Kreitman test, Rv2516c intra-MTBC polymorphism versus divergence to the M. canettii outgroup.
+# Divergence substitutions (Dn=2 non-synonymous, Ds=3 synonymous), each mapped to its structural unit (A: ferredoxin-like, B: helix-turn-helix, C: Ig-like).
+substitution	type	unit
+G50G	syn	A
+K72E	missense	A
+F92F	syn	B
+G132A	missense	B
+V235V	syn	C
+
+# Contingency table and test statistics, two alternative definitions of the polymorphism denominator.
+definition	Pn	Ps	Dn	Ds	NI	DoS	alpha	p_fisher
+all variable sites (Pn=243, Ps=78)	243	78	2	3	4.343	-0.357	-3.343	0.1003
+curated nine-polymorphic-site set (Pn=7, Ps=2)	7	2	2	3	4.2	-0.378	-3.2	0.2657
+
+# Exhaustive enumeration of statistical power: p-value for every possible (Dn, Ds) outcome at Dn+Ds=5 fixed, computed before the observed value was read, for each polymorphism definition.
+definition	Dn	Ds	NI	p
+all variable sites (Pn=243, Ps=78)	0	5	34.121	0.001
+all variable sites (Pn=243, Ps=78)	1	4	9.306	0.0153
+all variable sites (Pn=243, Ps=78)	2	3	4.343	0.1003
+all variable sites (Pn=243, Ps=78)	3	2	2.216	0.5996
+all variable sites (Pn=243, Ps=78)	4	1	1.034	1.0
+all variable sites (Pn=243, Ps=78)	5	0	0.282	0.3432
+curated nine-polymorphic-site set (Pn=7, Ps=2)	0	5	33.0	0.021
+curated nine-polymorphic-site set (Pn=7, Ps=2)	1	4	9.0	0.0909
+curated nine-polymorphic-site set (Pn=7, Ps=2)	2	3	4.2	0.2657
+curated nine-polymorphic-site set (Pn=7, Ps=2)	3	2	2.143	0.5804
+curated nine-polymorphic-site set (Pn=7, Ps=2)	4	1	1.0	1.0
+curated nine-polymorphic-site set (Pn=7, Ps=2)	5	0	0.273	0.5055

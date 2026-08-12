@@ -1,0 +1,202 @@
+# Table S4. Top-100 co-expression partners of Rv2516c in each of the two expression compendia used for the genome-wide, unbiased co-expression scan (3,911 genes each), ranked by Spearman correlation within each compendium. The top-50 subset used for the hypergeometric enrichment test against the four curated regulons (DosR, SigH, SigF, and the union of Rv2516c's five known upstream regulators) is flagged in the top50 column.
+compendium	rank	partner_locus	product	spearman_r	p_value	q_BH	top50
+GSE166501	1	Rv2517c	hypothetical protein	0.9286	2.932e-12	1.181e-08	yes
+GSE166501	2	Rv1989c	hypothetical protein	0.9066	7.426e-11	7.481e-08	yes
+GSE166501	3	Rv2021c	transcriptional regulator	0.9011	1.472e-10	9.884e-08	yes
+GSE166501	4	Rv1990c	transcriptional regulator	0.8755	2.275e-09	4.825e-07	yes
+GSE166501	5	Rv3007c	oxidoreductase	0.8626	7.201e-09	5.804e-07	yes
+GSE166501	6	Rv3053c	glutaredoxin electron transport protein NrdH	0.8614	7.988e-09	6.074e-07	yes
+GSE166501	7	Rv2050	RNA polymerase-binding protein RbpA	0.8535	1.532e-08	7.716e-07	yes
+GSE166501	8	Rv3334	MerR family transcriptional regulator	0.8504	1.948e-08	8.533e-07	yes
+GSE166501	9	Rv2020c	Conserved hypothetical protein	0.8394	4.438e-08	1.287e-06	yes
+GSE166501	10	Rv0810c	hypothetical protein	0.8333	6.833e-08	1.659e-06	yes
+GSE166501	11	Rv3290c	L-lysine-epsilon aminotransferase	0.8297	8.780e-08	1.944e-06	yes
+GSE166501	12	Rv2035	hypothetical protein	0.8211	1.541e-07	2.724e-06	yes
+GSE166501	13	Rv3046c	hypothetical protein	0.8193	1.732e-07	3.022e-06	yes
+GSE166501	14	Rv2875	major secreted immunogenic protein Mpt70	0.8053	4.069e-07	5.485e-06	yes
+GSE166501	15	Rv2369c	hypothetical protein	0.8004	5.391e-07	6.768e-06	yes
+GSE166501	16	Rv3289c	transmembrane protein	0.7930	8.105e-07	9.200e-06	yes
+GSE166501	17	Rv3287c	anti-sigma factor RsbW	0.7845	1.278e-06	1.291e-05	yes
+GSE166501	18	Rv3230c	stearoyl-CoA 9-desaturase electron transfer protein	0.7705	2.591e-06	2.101e-05	yes
+GSE166501	19	Rv2663	hypothetical protein	0.7668	3.090e-06	2.395e-05	yes
+GSE166501	20	Rv1833c	haloalkane dehalogenase	0.7656	3.275e-06	2.509e-05	yes
+GSE166501	21	Rv2034	ArsR family HTH-type transcriptional repressor	0.7576	4.737e-06	3.378e-05	yes
+GSE166501	22	Rv2022c	hypothetical protein	0.7558	5.148e-06	3.595e-05	yes
+GSE166501	23	Rv3052c	NrdI protein	0.7491	6.942e-06	4.542e-05	yes
+GSE166501	24	Rv2866	toxin RelG	0.7436	8.807e-06	5.537e-05	yes
+GSE166501	25	Rv0967	copper-sensing transcriptional repressor CsoR	0.7430	9.040e-06	5.631e-05	yes
+GSE166501	26	Rv2036	hypothetical protein	0.7418	9.522e-06	5.840e-05	yes
+GSE166501	27	Rv1991c	mRNA interferase MazF6	0.7411	9.771e-06	5.948e-05	yes
+GSE166501	28	Rv0384c	chaperone protein ClpB	0.7411	9.771e-06	5.948e-05	yes
+GSE166501	29	Rv3098c	hypothetical protein	0.7369	1.169e-05	6.796e-05	yes
+GSE166501	30	Rv3190A	hypothetical protein	0.7363	1.199e-05	6.940e-05	yes
+GSE166501	31	Rv1955	toxin HigB	0.7350	1.261e-05	7.237e-05	yes
+GSE166501	32	Rv2142c	toxin ParE2	0.7277	1.696e-05	9.090e-05	yes
+GSE166501	33	Rv0142	hypothetical protein	0.7259	1.824e-05	9.585e-05	yes
+GSE166501	34	Rv2718c	transcriptional regulator NrdR	0.7234	2.008e-05	1.034e-04	yes
+GSE166501	35	Rv2640c	ArsR family transcriptional regulator	0.7216	2.157e-05	1.098e-04	yes
+GSE166501	36	Rv1986	amino acid transporter	0.7179	2.484e-05	1.244e-04	yes
+GSE166501	37	Rv2308	hypothetical protein	0.7143	2.855e-05	1.391e-04	yes
+GSE166501	38	Rv1991A	antitoxin MazE6	0.7088	3.504e-05	1.644e-04	yes
+GSE166501	39	Rv0095c	hypothetical protein	0.7082	3.583e-05	1.662e-04	yes
+GSE166501	40	Rv3226c	hypothetical protein	0.7070	3.747e-05	1.724e-04	yes
+GSE166501	41	Rv1990A		0.7057	3.918e-05	1.770e-04	yes
+GSE166501	42	Rv3288c	hypothetical protein	0.7051	4.006e-05	1.804e-04	yes
+GSE166501	43	Rv2312	hypothetical protein	0.7033	4.280e-05	1.900e-04	yes
+GSE166501	44	Rv2024c	hypothetical protein	0.7015	4.571e-05	2.007e-04	yes
+GSE166501	45	Rv2664	hypothetical protein	0.7009	4.672e-05	2.042e-04	yes
+GSE166501	46	Rv3913	thioredoxin reductase	0.7009	4.672e-05	2.042e-04	yes
+GSE166501	47	Rv1961	hypothetical protein	0.6990	4.986e-05	2.147e-04	yes
+GSE166501	48	Rv2719c	membrane protein	0.6984	5.095e-05	2.182e-04	yes
+GSE166501	49	Rv3198c	ATP-dependent DNA helicase UvrD	0.6972	5.319e-05	2.256e-04	yes
+GSE166501	50	Rv2023A		0.6929	6.174e-05	2.528e-04	yes
+GSE166501	51	Rv0991c	hypothetical protein	0.6905	6.715e-05	2.703e-04	no
+GSE166501	52	Rv0077c	oxidoreductase	0.6880	7.298e-05	2.892e-04	no
+GSE166501	53	Rv0624	ribonuclease VapC30	0.6862	7.764e-05	3.041e-04	no
+GSE166501	54	Rv0877	hypothetical protein	0.6844	8.256e-05	3.190e-04	no
+GSE166501	55	Rv0839	hypothetical protein	0.6844	8.256e-05	3.190e-04	no
+GSE166501	56	Rv3161c	dioxygenase	0.6825	8.776e-05	3.352e-04	no
+GSE166501	57	Rv0340	hypothetical protein	0.6801	9.513e-05	3.576e-04	no
+GSE166501	58	Rv2723	integral membrane protein	0.6789	9.903e-05	3.705e-04	no
+GSE166501	59	Rv0990c	hypothetical protein	0.6777	1.031e-04	3.810e-04	no
+GSE166501	60	Rv3286c	RNA polymerase sigma factor SigF	0.6777	1.031e-04	3.810e-04	no
+GSE166501	61	Rv0968	hypothetical protein	0.6740	1.160e-04	4.179e-04	no
+GSE166501	62	Rv1945	hypothetical protein	0.6728	1.207e-04	4.307e-04	no
+GSE166501	63	Rv3048c	ribonucleoside-diphosphate reductase subunit beta NrdF2	0.6722	1.230e-04	4.365e-04	no
+GSE166501	64	Rv2142A	antitoxin ParD2	0.6722	1.230e-04	4.365e-04	no
+GSE166501	65	Rv3223c	ECF RNA polymerase sigma factor SigH	0.6716	1.255e-04	4.435e-04	no
+GSE166501	66	Rv1964	integral membrane protein	0.6685	1.382e-04	4.793e-04	no
+GSE166501	67	Rv2722	hypothetical protein	0.6673	1.436e-04	4.926e-04	no
+GSE166501	68	Rv3527	hypothetical protein	0.6673	1.436e-04	4.926e-04	no
+GSE166501	69	Rv2717c	hypothetical protein	0.6673	1.436e-04	4.926e-04	no
+GSE166501	70	Rv1947	hypothetical protein	0.6661	1.492e-04	5.070e-04	no
+GSE166501	71	Rv2639c	integral membrane protein	0.6624	1.672e-04	5.540e-04	no
+GSE166501	72	Rv2792c	resolvase	0.6606	1.768e-04	5.780e-04	no
+GSE166501	73	Rv0621	membrane protein	0.6600	1.802e-04	5.865e-04	no
+GSE166501	74	Rv1956	antitoxin HigA	0.6600	1.802e-04	5.865e-04	no
+GSE166501	75	Rv2707	hypothetical protein	0.6587	1.870e-04	6.033e-04	no
+GSE166501	76	Rv3076	hypothetical protein	0.6587	1.870e-04	6.033e-04	no
+GSE166501	77	Rv2231A	ribonuclease VapC16	0.6575	1.940e-04	6.226e-04	no
+GSE166501	78	Rv1765c	hypothetical protein	0.6575	1.940e-04	6.226e-04	no
+GSE166501	79	Rv1374c	hypothetical protein	0.6545	2.127e-04	6.707e-04	no
+GSE166501	80	Rv1957	SecB-like chaperone	0.6526	2.247e-04	7.024e-04	no
+GSE166501	81	Rv2231B	antitoxin VapB16	0.6520	2.288e-04	7.125e-04	no
+GSE166501	82	Rv3054c	hypothetical protein	0.6520	2.288e-04	7.125e-04	no
+GSE166501	83	Rv2979c	resolvase	0.6520	2.288e-04	7.125e-04	no
+GSE166501	84	Rv2466c	hypothetical protein	0.6514	2.329e-04	7.238e-04	no
+GSE166501	85	Rv3642c	hypothetical protein	0.6471	2.641e-04	7.984e-04	no
+GSE166501	86	Rv1471	thioredoxin	0.6410	3.150e-04	9.204e-04	no
+GSE166501	87	Rv3641c	cell filamentation protein Fic	0.6410	3.150e-04	9.204e-04	no
+GSE166501	88	Rv0623	antitoxin VapB30	0.6404	3.205e-04	9.319e-04	no
+GSE166501	89	Rv3463	hypothetical protein	0.6398	3.261e-04	9.427e-04	no
+GSE166501	90	Rv3221A	anti-sigma factor RshA	0.6398	3.261e-04	9.427e-04	no
+GSE166501	91	Rv0887c	hypothetical protein	0.6380	3.435e-04	9.831e-04	no
+GSE166501	92	Rv3640c	transposase	0.6355	3.679e-04	1.040e-03	no
+GSE166501	93	Rv3225c	GCN5-like N-acetyltransferase	0.6343	3.806e-04	1.068e-03	no
+GSE166501	94	Rv2694c	hypothetical protein	0.6331	3.938e-04	1.101e-03	no
+GSE166501	95	Rv0793	monooxygenase	0.6313	4.142e-04	1.143e-03	no
+GSE166501	96	Rv1994c	HTH-type transcriptional regulator CmtR	0.6294	4.356e-04	1.184e-03	no
+GSE166501	97	Rv2100	hypothetical protein	0.6294	4.356e-04	1.184e-03	no
+GSE166501	98	Rv1934c	acyl-CoA dehydrogenase FadE17	0.6294	4.356e-04	1.184e-03	no
+GSE166501	99	Rv2015c	hypothetical protein	0.6294	4.356e-04	1.184e-03	no
+GSE166501	100	Rv2016	hypothetical protein	0.6276	4.580e-04	1.232e-03	no
+GSE71200	1	Rv2517c	hypothetical protein	0.5074	2.838e-08	7.841e-05	yes
+GSE71200	2	Rv0579	hypothetical protein	0.4952	6.786e-08	7.841e-05	yes
+GSE71200	3	Rv0830	S-adenosylmethionine-dependent methyltransferase	0.4852	1.354e-07	7.841e-05	yes
+GSE71200	4	Rv1169c	lipase LipX	0.4788	2.084e-07	1.019e-04	yes
+GSE71200	5	Rv3569c	4,5-9,10-diseco-3-hydroxy-5,9,17-trioxoandrosta-1(10),2-dien	0.4513	1.202e-06	3.056e-04	yes
+GSE71200	6	Rv3286c	RNA polymerase sigma factor SigF	0.4507	1.249e-06	3.056e-04	yes
+GSE71200	7	Rv1599	histidinol dehydrogenase	0.4475	1.518e-06	3.494e-04	yes
+GSE71200	8	Rv0865	molybdopterin biosynthesis protein	0.4401	2.351e-06	4.842e-04	yes
+GSE71200	9	Rv1833c	haloalkane dehalogenase	0.4320	3.768e-06	6.410e-04	yes
+GSE71200	10	Rv1110	4-hydroxy-3-methylbut-2-enyl diphosphate reductase	0.4256	5.406e-06	8.614e-04	yes
+GSE71200	11	Rv2077c	transmembrane protein	0.4179	8.292e-06	1.159e-03	yes
+GSE71200	12	Rv3582c	2-C-methyl-D-erythritol 4-phosphate cytidylyltransferase	0.4152	9.631e-06	1.216e-03	yes
+GSE71200	13	Rv2340c	PE-PGRS family protein PE_PGRS39	0.4089	1.349e-05	1.508e-03	yes
+GSE71200	14	Rv2093c	Sec-independent protein translocase transmembrane protein Ta	0.3991	2.257e-05	2.265e-03	yes
+GSE71200	15	Rv1628c	hypothetical protein	0.3950	2.792e-05	2.616e-03	yes
+GSE71200	16	Rv1227c	transmembrane protein	0.3939	2.941e-05	2.676e-03	yes
+GSE71200	17	Rv1989c	hypothetical protein	0.3931	3.073e-05	2.727e-03	yes
+GSE71200	18	Rv0278c	PE-PGRS family protein PE_PGRS3	0.3907	3.460e-05	2.881e-03	yes
+GSE71200	19	Rv2125	hypothetical protein	0.3894	3.699e-05	2.896e-03	yes
+GSE71200	20	Rv3526	3-ketosteroid-9-alpha-monooxygenase oxygenase subunit	0.3894	3.701e-05	2.896e-03	yes
+GSE71200	21	Rv0340	hypothetical protein	0.3875	4.074e-05	3.066e-03	yes
+GSE71200	22	Rv0275c	transcriptional regulator	0.3851	4.577e-05	3.176e-03	yes
+GSE71200	23	Rv3527	hypothetical protein	0.3851	4.577e-05	3.176e-03	yes
+GSE71200	24	Rv1536	isoleucine--tRNA ligase	0.3849	4.627e-05	3.176e-03	yes
+GSE71200	25	Rv2515c	hypothetical protein	0.3826	5.172e-05	3.430e-03	yes
+GSE71200	26	Rv1831	hypothetical protein	0.3780	6.459e-05	4.143e-03	yes
+GSE71200	27	Rv0328	transcriptional regulator	0.3745	7.673e-05	4.570e-03	yes
+GSE71200	28	Rv3288c	hypothetical protein	0.3714	8.881e-05	4.894e-03	yes
+GSE71200	29	Rv1168c	PPE family protein PPE17	0.3711	9.014e-05	4.899e-03	yes
+GSE71200	30	Rv3070	fluoride ion transporter CrcB	0.3686	1.010e-04	5.276e-03	yes
+GSE71200	31	Rv1000c	hypothetical protein	0.3672	1.082e-04	5.499e-03	yes
+GSE71200	32	Rv0766c	cytochrome P450 Cyp123	0.3662	1.133e-04	5.614e-03	yes
+GSE71200	33	Rv0489	2,3-bisphosphoglycerate-dependent phosphoglycerate mutase	0.3648	1.209e-04	5.770e-03	yes
+GSE71200	34	Rv3066	DeoR family transcriptional regulator	0.3618	1.388e-04	6.465e-03	yes
+GSE71200	35	Rv2558	hypothetical protein	0.3605	1.471e-04	6.695e-03	yes
+GSE71200	36	Rv3065	multidrug resistance protein Mmr	0.3591	1.566e-04	7.046e-03	yes
+GSE71200	37	Rv2142c	toxin ParE2	0.3560	1.803e-04	7.630e-03	yes
+GSE71200	38	Rv2926c	hypothetical protein	0.3559	1.813e-04	7.630e-03	yes
+GSE71200	39	Rv0753c	methylmalonate-semialdehyde dehydrogenase	0.3559	1.813e-04	7.630e-03	yes
+GSE71200	40	Rv2068c	beta-lactamase	0.3530	2.058e-04	8.388e-03	yes
+GSE71200	41	Rv1855c	oxidoreductase	0.3516	2.189e-04	8.514e-03	yes
+GSE71200	42	Rv1909c	ferric uptake regulation protein FurA	0.3515	2.204e-04	8.514e-03	yes
+GSE71200	43	Rv1378c	hypothetical protein	0.3515	2.205e-04	8.514e-03	yes
+GSE71200	44	Rv0268c	hypothetical protein	0.3513	2.219e-04	8.514e-03	yes
+GSE71200	45	Rv2539c	shikimate kinase	0.3495	2.402e-04	8.876e-03	yes
+GSE71200	46	Rv1460	transcriptional regulator	0.3495	2.408e-04	8.876e-03	yes
+GSE71200	47	Rv1602	imidazole glycerol phosphate synthase subunit HisH	0.3491	2.443e-04	8.876e-03	yes
+GSE71200	48	Rv3289c	transmembrane protein	0.3485	2.512e-04	8.941e-03	yes
+GSE71200	49	Rv0244c	acyl-CoA dehydrogenase FadE5	0.3461	2.789e-04	9.656e-03	yes
+GSE71200	50	Rv2643	arsenic-transport integral membrane protein ArsC	0.3444	2.997e-04	1.020e-02	yes
+GSE71200	51	Rv2225	3-methyl-2-oxobutanoate hydroxymethyltransferase	0.3439	3.063e-04	1.022e-02	no
+GSE71200	52	Rv2886c	resolvase	0.3438	3.082e-04	1.022e-02	no
+GSE71200	53	Rv1486c	hypothetical protein	0.3426	3.248e-04	1.046e-02	no
+GSE71200	54	Rv2374c	heat-inducible transcription repressor HrcA	0.3418	3.362e-04	1.061e-02	no
+GSE71200	55	Rv1874	hypothetical protein	0.3408	3.505e-04	1.089e-02	no
+GSE71200	56	Rv0711	arylsulfatase AtsA	0.3370	4.110e-04	1.227e-02	no
+GSE71200	57	Rv0276	hypothetical protein	0.3355	4.392e-04	1.268e-02	no
+GSE71200	58	Rv3189	hypothetical protein	0.3354	4.405e-04	1.268e-02	no
+GSE71200	59	Rv2016	hypothetical protein	0.3341	4.645e-04	1.307e-02	no
+GSE71200	60	Rv2025c	cation efflux system protein	0.3315	5.190e-04	1.417e-02	no
+GSE71200	61	Rv0188	transmembrane protein	0.3313	5.216e-04	1.417e-02	no
+GSE71200	62	Rv1646	PE family protein PE17	0.3310	5.280e-04	1.420e-02	no
+GSE71200	63	Rv2664	hypothetical protein	0.3310	5.298e-04	1.420e-02	no
+GSE71200	64	Rv3574	HTH-type transcriptional regulator KstR	0.3292	5.685e-04	1.473e-02	no
+GSE71200	65	Rv1587c	hypothetical protein	0.3282	5.927e-04	1.506e-02	no
+GSE71200	66	Rv1151c	NAD-dependent protein deacylase	0.3273	6.154e-04	1.529e-02	no
+GSE71200	67	Rv1381	dihydroorotase	0.3269	6.250e-04	1.529e-02	no
+GSE71200	68	Rv3334	MerR family transcriptional regulator	0.3267	6.300e-04	1.529e-02	no
+GSE71200	69	Rv0345	hypothetical protein	0.3262	6.449e-04	1.529e-02	no
+GSE71200	70	Rv1258c	multidrug-efflux transporter	0.3257	6.561e-04	1.529e-02	no
+GSE71200	71	Rv1706c	PPE family protein PPE23	0.3257	6.564e-04	1.529e-02	no
+GSE71200	72	Rv0586	HTH-type transcriptional regulator Mce2R	0.3253	6.664e-04	1.543e-02	no
+GSE71200	73	Rv2824c	CRISPR-associated endoribonuclease Cas6	0.3246	6.855e-04	1.549e-02	no
+GSE71200	74	Rv3503c	ferredoxin FdxD	0.3213	7.830e-04	1.731e-02	no
+GSE71200	75	Rv3197A	transcriptional regulator WhiB7	0.3205	8.108e-04	1.772e-02	no
+GSE71200	76	Rv1991c	mRNA interferase MazF6	0.3202	8.197e-04	1.782e-02	no
+GSE71200	77	Rv3197	ABC transporter ATP-binding protein	0.3194	8.468e-04	1.831e-02	no
+GSE71200	78	Rv0196	HTH-type transcriptional regulator	0.3179	8.988e-04	1.914e-02	no
+GSE71200	79	Rv2307c	hypothetical protein	0.3178	9.002e-04	1.914e-02	no
+GSE71200	80	Rv1499	hypothetical protein	0.3170	9.292e-04	1.959e-02	no
+GSE71200	81	Rv3204	DNA-methyltransferase	0.3165	9.476e-04	1.959e-02	no
+GSE71200	82	Rv3074	hypothetical protein	0.3164	9.511e-04	1.959e-02	no
+GSE71200	83	Rv3010c	6-phosphofructokinase	0.3148	1.014e-03	2.060e-02	no
+GSE71200	84	Rv2659c	prophage integrase	0.3147	1.016e-03	2.060e-02	no
+GSE71200	85	Rv1985c	HTH-type transcriptional regulator	0.3138	1.053e-03	2.085e-02	no
+GSE71200	86	Rv1600	histidinol-phosphate aminotransferase	0.3138	1.055e-03	2.085e-02	no
+GSE71200	87	Rv1225c	hypothetical protein	0.3124	1.114e-03	2.180e-02	no
+GSE71200	88	Rv2725c	GTP-binding protein HflX	0.3112	1.167e-03	2.218e-02	no
+GSE71200	89	Rv3064c	integral membrane protein	0.3092	1.259e-03	2.297e-02	no
+GSE71200	90	Rv2556c	hypothetical protein	0.3091	1.262e-03	2.297e-02	no
+GSE71200	91	Rv3290c	L-lysine-epsilon aminotransferase	0.3091	1.265e-03	2.297e-02	no
+GSE71200	92	Rv2504c	succinyl-CoA:3-ketoacid-CoA transferase subunit A	0.3090	1.268e-03	2.297e-02	no
+GSE71200	93	Rv1167c	transcriptional regulator	0.3087	1.285e-03	2.309e-02	no
+GSE71200	94	Rv0725c	hypothetical protein	0.3086	1.286e-03	2.309e-02	no
+GSE71200	95	Rv0493c	hypothetical protein	0.3080	1.320e-03	2.348e-02	no
+GSE71200	96	Rv2640c	ArsR family transcriptional regulator	0.3077	1.335e-03	2.364e-02	no
+GSE71200	97	Rv0245	oxidoreductase	0.3075	1.345e-03	2.370e-02	no
+GSE71200	98	Rv2913c	D-amino acid aminohydrolase	0.3068	1.380e-03	2.397e-02	no
+GSE71200	99	Rv0297	PE-PGRS family protein PE_PGRS5	0.3067	1.386e-03	2.397e-02	no
+GSE71200	100	Rv3069	fluoride ion transporter CrcB	0.3059	1.426e-03	2.447e-02	no

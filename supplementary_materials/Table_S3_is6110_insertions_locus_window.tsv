@@ -1,0 +1,12 @@
+# Table S3. Non-reference IS6110 insertions found within +/-10 kb of the Rv2516c-Rv2517c pair (H37Rv coordinates 2,827,000-2,836,000 for the 9 kb Rv2512c-Rv2518c cassette itself), out of 18,435 genome-wide non-reference IS6110 insertions scored across 5,169 MTBC genomes spanning 614 phylogenetic clades.
+# The Rv2516c-Rv2517c pair itself (2,832,710-2,833,761) carries zero insertions in this sample; the counts below fall in the flanking genes of the same cassette.
+clade	strain	position_h37rv	in_9kb_cassette_window
+L2.2.1	SRR27450328	2829361	True
+L5.2.2.2.2.2.2.1	SRR33969376	2830021	True
+L8	SRR1173284	2830197	True
+L8	SRR10828835	2830197	True
+Orygis_La3.2.2.2.2.2.1.2.1	SRR10251186	2832449	True
+Orygis_La3.2.2.2.2.2.1.2.1	SRR10251187	2832449	True
+Orygis_La3.2.2.2.2.2.1.2.1	SRR10251202	2832449	True
+Orygis_La3.2.2.2.2.2.1.2.1	SRR10251195	2832449	True
+Bovis.2.2.1.2.1.1.2.2.2.1.1	SRR1792409	2837191	False
